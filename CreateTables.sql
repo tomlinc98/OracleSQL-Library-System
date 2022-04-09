@@ -1,21 +1,24 @@
+    --CREATE TABLES--
+
+--BOOK TABLE--
 create table book (
     isbn                           number not null constraint book_isbn_pk primary key not null,
     title                          varchar2(255) not null,
     location_code                  varchar2(10) not null,
     publication_date               date,
     stock                          integer
-)
-;
+);
 
+--CATAGORY TABLE--
 create table catagory (
     id                             number not null constraint catagory_id_pk primary key,
     book_id                        number
                                    constraint catagory_book_id_fk
                                    references book on delete cascade,
     cat_name                       varchar2(30)
-)
-;
+);
 
+--COPY TABLE--
 create table copy (
     id                             number not null constraint copy_id_pk primary key,
     book_id                        number
@@ -23,31 +26,31 @@ create table copy (
                                    references book on delete cascade,
     date_aquired                   date,
     date_removed                   date
-)
-;
+);
 
+--AUTHOR TABLE--
 create table author (
     id                             number not null constraint author_id_pk primary key,
     book_author_id                 number,
     first_name                     varchar2(50),
     last_name                      varchar2(50)
-)
-;
+);
 
+--PUBLISHER TABLE--
 create table publisher (
     id                             number not null constraint publisher_id_pk primary key,
     book_publisher_id              number,
     pub_name                       varchar2(255)
-)
-;
+);
 
-create table the_user (
+--USERS TABLE--
+create table users (
     student_id                     number not null constraint the_user_student_id_pk primary key not null,
     first_name                     varchar2(50) not null,
     last_name                      varchar2(50) not null
-)
-;
+);
 
+--RESERVATION TABLE--
 create table reservation (
     id                             number not null constraint reservation_id_pk primary key,
     user_id                        number
@@ -57,18 +60,18 @@ create table reservation (
     book_isbn                      number
                                    constraint reservation_book_isbn_fk
                                    references book on delete cascade
-)
-;
+);
 
+--RESERVATION_STATUS TABLE--
 create table reservation_status (
     id                             number not null constraint reservation_status_id_pk primary key,
     reservation_id                 number
                                    constraint reservation_s_reservation_i_fk
                                    references reservation on delete cascade,
-    status_value                   integer
-)
-;
+    status_value                   enum('Available', 'Reserved')
+);
 
+--LOAN TABLE--
 create table loan (
     id                             number not null constraint loan_id_pk primary key,
     user_id                        number
@@ -79,9 +82,9 @@ create table loan (
     book_isbn                      number
                                    constraint loan_book_isbn_fk
                                    references book on delete cascade
-)
-;
+);
 
+--FINE TABLE--
 create table fine (
     id                             number not null constraint fine_id_pk primary key,
     user_id                        number
@@ -89,11 +92,10 @@ create table fine (
                                    references the_user on delete cascade,
     fine_date                      timestamp not null,
     fine_total                     number
-)
-;
+);
 
 
--- triggers
+    --TRIGGERS--
 create or replace trigger author_biu
     before insert or update 
     on author
