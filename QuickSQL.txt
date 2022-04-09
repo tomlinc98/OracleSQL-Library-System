@@ -17,7 +17,7 @@ book /insert 30
     publisher
       pub_name vc255
 
-user
+users
   student_id /nn /pk
   first_name vc50 /nn
   last_name vc50 /nn
@@ -34,11 +34,9 @@ user
   fine
     fine_date ts /nn
     fine_total num
-    
-      
-    
-  
+  fine_payment
+    pay_date
+    pay_amount
+    user_id /fk users
    
 view books_v book author publisher
-
-# settings = { language: "EN", APEX: true }
