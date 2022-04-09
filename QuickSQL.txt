@@ -25,7 +25,7 @@ user
     res_date timestamp /nn
     book_isbn /fk book
     reservation_status
-      status_value int --fix
+      status_value vc30 --fix--
   loan
     loan_given timestamp /nn
     loan_return timestamp /nn
