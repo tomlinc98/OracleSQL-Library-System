@@ -1,0 +1,44 @@
+book /insert 30
+  isbn /nn /pk 
+  title vc255 /nn
+  location_code vc10 /nn
+  publication_date date
+  stock int
+  catagory
+    cat_name vc30
+  copy
+    date_aquired date
+    date_removed date
+  book_author
+    author
+      first_name vc50 
+      last_name vc50
+  book_publisher
+    publisher
+      pub_name vc255
+
+user
+  student_id /nn /pk
+  first_name vc50 /nn
+  last_name vc50 /nn
+  reservation
+    res_date timestamp /nn
+    book_isbn /fk book
+    reservation_status
+      status_value int --fix
+  loan
+    loan_given timestamp /nn
+    loan_return timestamp /nn
+    book_isbn /fk book
+    user_id /fk user
+  fine
+    fine_date ts /nn
+    fine_total num
+    
+      
+    
+  
+   
+view books_v book author publisher
+
+# settings = { language: "EN", APEX: true }
