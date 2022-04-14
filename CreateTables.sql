@@ -1,6 +1,6 @@
 -- create tables
 create table book (
-    isbn                           number not null constraint book_isbn_pk primary key not null,
+    isbn                           number not null constraint book_isbn_pk primary key,
     title                          varchar2(255) not null,
     location_code                  varchar2(10) not null,
     publication_date               date,
