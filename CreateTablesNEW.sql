@@ -105,7 +105,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         users_id                       NUMBER,
         loan_given                     DATE NOT NULL,
         loan_return                    DATE NOT NULL,
-        book_isbn                      NUMBER
+        book_isbn                      NUMBER,
         CONSTRAINT loan_id_pk 
             PRIMARY KEY(id),
         CONSTRAINT loan_user_id_fk
