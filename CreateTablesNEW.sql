@@ -2,7 +2,15 @@
 
 DROP TABLE book;
 DROP TABLE catagory;
+DROP TABLE copy;
 DROP TABLE author;
+DROP TABLE publisher;
+DROP TABLE users;
+DROP TABLE reservation;
+DROP TABLE reservation_status;
+DROP TABLE loan;
+DROP TABLE fine;
+DROP TABLE fine_payment;
 
 ------------------------------CREATE SCHEMA------------------------------
 
@@ -11,21 +19,21 @@ CREATE SCHEMA AUTHORIZATION library_admin
 ------------------------------CREATE TABLES------------------------------
 
 CREATE TABLE book (
-        isbn                           NUMBER NOT NULL CONSTRAINT book_isbn_pk PRIMARY KEY,
+        isbn                           NUMBER NOT NULL,
         title                          VARCHAR2(255) NOT NULL,
         location_code                  VARCHAR2(10) NOT NULL,
         publication_date               DATE,
-        stock                          INTEGER
-        CONSTRAINT book_pk
-            PRIMARY KEY (isbn)
-)
+        stock                          INTEGER,
+        CONSTRAINT book_isbn_pk PRIMARY KEY(isbn)
+);
+
     CREATE TABLE catagory (
-        id                             NUMBER NOT NULL CONSTRAINT catagory_id_pk PRIMARY KEY,
-        book_isbn                      NUMBER
-                                       CONSTRAINT catagory_book_id_fk
-                                       REFERENCES book ON DELETE CASCADE,
-        cat_name                       VARCHAR2(30)
-)
+        id                             NUMBER NOT NULL,
+        book_isbn                      NUMBER,
+        cat_name                       VARCHAR2(30),
+        CONSTRAINT catagory_id_pk PRIMARY KEY(id),
+        CONSTRAINT catagory_book_isbn_fk FOREIGN KEY(isbn) REFERENCES book ON DELETE CASCADE
+);
 
     CREATE TABLE copy (
         id                             NUMBER NOT NULL CONSTRAINT copy_id_pk PRIMARY KEY,
