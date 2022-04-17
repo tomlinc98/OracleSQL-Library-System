@@ -141,7 +141,8 @@ CREATE SCHEMA AUTHORIZATION library_admin
 
 -------------------------------ALTER ENUM-------------------------------
 
-    ALTER TABLE reservation_status 
-        ADD status_value VARCHAR2(6),
-        CONSTRAINT status_type
-        CHECK (status_value in('AVAILABLE','RESERVED'));
+ALTER TABLE reservation_status 
+    ADD (status_value VARCHAR2(6),
+    CONSTRAINT status_type
+    CHECK (status_value in('AVAILABLE','RESERVED'))
+);
