@@ -35,18 +35,19 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT catagory_id_pk 
             PRIMARY KEY(id),
         CONSTRAINT catagory_book_isbn_fk
-            FOREIGN KEY(isbn) REFERENCES book(isbn) ON DELETE CASCADE
+            FOREIGN KEY(book_isbn) 
+            REFERENCES book(isbn) ON DELETE CASCADE
 )
 
     CREATE TABLE copy (
         id                             NUMBER NOT NULL,
-        book_id                        NUMBER,
+        book_isbn                      NUMBER,
         date_aquired                   DATE NOT NULL,
         date_removed                   DATE,
         CONSTRAINT copy_id_pk 
             PRIMARY KEY(id),
         CONSTRAINT copy_book_isbn_fk 
-            FOREIGN KEY(isbn) 
+            FOREIGN KEY(book_isbn) 
             REFERENCES book(isbn) ON DELETE CASCADE
 )
 
