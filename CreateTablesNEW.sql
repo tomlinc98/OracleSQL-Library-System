@@ -18,7 +18,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
 
 ------------------------------CREATE TABLES------------------------------
 
-CREATE TABLE book (
+    CREATE TABLE book (
         isbn                           NUMBER NOT NULL,
         title                          VARCHAR2(255) NOT NULL,
         location_code                  VARCHAR2(10) NOT NULL,
@@ -140,7 +140,7 @@ CREATE TABLE book (
 
 -------------------------------ALTER ENUM-------------------------------
 
-ALTER TABLE reservation_status 
-    ADD status_value VARCHAR2(6),
-    CONSTRAINT status_type
-    CHECK (status_value in('AVAILABLE','RESERVED'));
+    ALTER TABLE reservation_status 
+        ADD status_value VARCHAR2(6),
+        CONSTRAINT status_type
+        CHECK (status_value in('AVAILABLE','RESERVED'));
