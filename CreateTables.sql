@@ -5,6 +5,8 @@ DROP TABLE catagory;
 DROP TABLE copy;
 DROP TABLE author;
 DROP TABLE publisher;
+DROP TABLE book_author;
+DROP TABLE book_publisher;
 DROP TABLE users;
 DROP TABLE reservation;
 DROP TABLE reservation_status;
