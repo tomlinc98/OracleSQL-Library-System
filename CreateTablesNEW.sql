@@ -26,7 +26,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         stock                          INTEGER,
         CONSTRAINT book_isbn_pk
             PRIMARY KEY(isbn)
-)
+);
 
     CREATE TABLE catagory (
         id                             NUMBER NOT NULL,
@@ -37,7 +37,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT catagory_book_isbn_fk
             FOREIGN KEY(book_isbn) 
             REFERENCES book(isbn) ON DELETE CASCADE
-)
+);
 
     CREATE TABLE copy (
         id                             NUMBER NOT NULL,
@@ -49,7 +49,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT copy_book_isbn_fk 
             FOREIGN KEY(book_isbn) 
             REFERENCES book(isbn) ON DELETE CASCADE
-)
+);
 
     CREATE TABLE author (
         id                             NUMBER NOT NULL,
@@ -58,7 +58,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         last_name                      VARCHAR2(50),
         CONSTRAINT author_id_pk
             PRIMARY KEY(id)
-)
+);
 
     CREATE TABLE publisher (
         id                             NUMBER NOT NULL,
@@ -66,7 +66,29 @@ CREATE SCHEMA AUTHORIZATION library_admin
         pub_name                       VARCHAR2(255),
         CONSTRAINT publisher_id_pk
             PRIMARY KEY(id)
-)
+);
+
+    CREATE TABLE book_author (
+        book_isbn                      NUMBER,
+        author_id                      NUMBER,
+        CONSTRAINT book_author_book_isbn_fk
+            FOREIGN KEY(book_isbn)
+            REFERENCES book(isbn),
+        CONSTRAINT book_author_author_id_fk
+            FOREIGN KEY(author_id)
+            REFERENCES author(id)
+);
+
+    CREATE TABLE book_publisher (
+        book_isbn                      NUMBER,
+        pub_id                         NUMBER,
+        CONSTRAINT book_publisher_book_isbn_fk
+            FOREIGN KEY(book_isbn)
+            REFERENCES book(isbn),
+        CONSTRAINT book_publisher_publisher_id_fk
+            FOREIGN KEY(pub_id)
+            REFERENCES publisher(id)
+);        
 
     CREATE TABLE users (
         id                             NUMBER NOT NULL,
@@ -74,7 +96,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         last_name                      VARCHAR2(50) NOT NULL,
         CONSTRAINT users_student_id_pk 
             PRIMARY KEY(id)
-)
+);
 
     CREATE TABLE reservation (
         id                             NUMBER NOT NULL,
@@ -89,7 +111,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT reservation_book_isbn_fk
             FOREIGN KEY(book_isbn)
             REFERENCES book(isbn) ON DELETE CASCADE
-)
+);
 
     CREATE TABLE reservation_status (
         id                             NUMBER NOT NULL,
@@ -99,7 +121,8 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT res_status_res_id_fk
             FOREIGN KEY(reservation_id)
             REFERENCES reservation(id) ON DELETE CASCADE
-)
+);
+
     CREATE TABLE loan (
         id                             NUMBER NOT NULL,
         users_id                       NUMBER,
@@ -114,7 +137,8 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT loan_book_isbn_fk
             FOREIGN KEY(book_isbn)
             REFERENCES book(isbn) ON DELETE CASCADE
-)
+);
+
     CREATE TABLE fine (
         id                             NUMBER NOT NULL,
         users_id                       NUMBER,
@@ -125,7 +149,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT fine_users_id_fk
             FOREIGN KEY(users_id)
             REFERENCES users(id) ON DELETE CASCADE
-)
+);
 
     CREATE TABLE fine_payment (
         id                             NUMBER NOT NULL,
@@ -137,7 +161,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT fine_payment_users_id_fk
             FOREIGN KEY(users_id)  
             REFERENCES users ON DELETE CASCADE
-)
+);
 
 -------------------------------ALTER ENUM-------------------------------
 
