@@ -74,7 +74,7 @@ Insert into tblFine values(8, “13-11-2019", 2000)
 INSERT INTO tblfine VALUES(9, “21-02-1863”,90009)
 INSERT INTO tblfine VALUES(10, “13-10-2018”,80)
 
-----------------------INSERT FINE PAYMENT VALUES------------------------
+-----------------------INSERT FINE PAYMENT VALUES-------------------------
 
 INSERT INTO tblfine_payment VALUES (1,”17-04-2022”,30 ,1)
 INSERT INTO tblfine_payment VALUES (2,”21-03-2022”,45, 2)’
@@ -86,3 +86,56 @@ INSERT INTO tblfine_payment VALUES (7,”02-04-2022”,1000, 7)
 INSERT INTO tblfine_payment VALUES (8,”14-11-2020”,2000, 8)
 INSERT INTO tblfine_payment VALUES (9,”21-02-2003”,90009, 9)
 INSERT INTO tblfine_payment VALUES (10,”15-10-2018”,80, 10)
+
+------------------------INSERT PUBLISHER VALUES--------------------------
+
+insert into publisher values ('1', '045689','St.Greens Press');
+insert into publisher values ('2', '032321','Houston Books');
+insert into publisher values ('3', '077789','Sutton Publishing');
+insert into publisher values ('4', '023498','Dr Wall States');
+insert into publisher values ('5', '024567','Radley Press');
+insert into publisher values ('6', '045689','J.B Elton');
+insert into publisher values ('7', '066896','A&F Publishing');
+insert into publisher values ('8', '099034','John Publishing');
+insert into publisher values ('9', '020576','Ford Books');
+insert into publisher values ('10', '068890','Bee Books');        
+
+-------------------------INSERT USER VALUES-----------------------------
+
+
+insert into users values ('1', 'Brett','Simmons');
+insert into users values ('2', 'Selena','Johnson');
+insert into users values ('3', 'Gary','Keaton');           
+insert into users values ('4', 'Bobby','Vermon');
+insert into users values ('5', 'John','Black');
+insert into users values ('6', 'Megan','Frasher');           
+insert into users values ('7', 'Samantha','Ruth');           
+insert into users values ('8', 'Tory','Diaz');
+insert into users values ('9', 'Jason','Wayne');           
+insert into users values ('10', 'Kira','Crawford');
+
+---------------------INSERT RESERVATION VALUES------------------------
+           
+insert into reservation values ('1','155662', '16-Jan-2021','9781409189121');
+insert into reservation values ('2','186742', '8-Jan-2022','9780241529713');
+insert into reservation values ('3','111674', '20-Feb-2021','9781846274510');
+insert into reservation values ('4','1235500', '7-Jul-2019','9780141019017');
+insert into reservation values ('5','144856','4-May-2020','9780099460992');
+insert into reservation values ('6','121550','27-Aug-2021','9781984820389');
+insert into reservation values ('7','100976','30-Sept-2018','9781594200823');
+insert into reservation values ('8','140010','5-Mar-2022','9780141006871');
+insert into reservation values ('9','192325','19-Oct-2021','9780195069976');
+insert into reservation values ('10','130444','15-Dec-2019','9781848250789');
+
+------------------INSERT RESERVATION STATUS VALUES--------------------
+           
+insert into reservation_status values ('1', '222946','Reserved');
+insert into reservation_status values ('2', '254789','Available');
+insert into reservation_status values ('3', '273554','Reserved');
+insert into reservation_status values ('4', '244770','Available');
+insert into reservation_status values ('5', '200069','Available');
+insert into reservation_status values ('6', '201786','Available');
+insert into reservation_status values ('7', '265093','Reserved');
+insert into reservation_status values ('8', '203340','Available');
+insert into reservation_status values ('9', '288885','Reserved');
+insert into reservation_status values ('10', '220035','Reserved');
