@@ -37,16 +37,16 @@ INSERT INTO table copy VALUES (‘9’, ‘9780195069976’, );
 INSERT INTO table copy VALUES (‘10’,‘9781848250789’,);
 
 --------------------------INSERT AUTHOR VALUES--------------------------
-INSERT INTO table author VALUES (‘1’, ‘9781409189121’, ‘Ruth Cooker’, ‘Burks’);
-INSERT INTO table author VALUES (‘2’, ‘9780241529713’, 'Dr Julie', ‘Smith’);
-INSERT INTO table author VALUES (‘3’, ‘9781846274510’, ‘Katherine’, ‘Boo’);
-INSERT INTO table author VALUES (‘4’, ‘9780141019017’, ‘Steven D.’, ‘Levitt’)
-INSERT INTO table author VALUES (‘5’, ‘9780099460992’, ‘Andrew’, ‘Solomon’);
-INSERT INTO table author VALUES (‘6’, ‘9781984820389’, ‘Cathy Park’, ‘Hong’);
-INSERT INTO table author VALUES (‘7’, ‘9781594200823’, ‘Michael’, ‘Pollen’);
-INSERT INTO table author VALUES (‘8’, ‘9780141006871’, ‘Eric’, ‘Schlosser’);
-INSERT INTO table author VALUES (‘9’, ‘9780195069976’, ‘Rachel’, ‘Carson’);
-INSERT INTO table author VALUES (‘10’,‘9781848250789’, ‘Annie’, ‘Dillard’);
+INSERT INTO table author VALUES (‘1’, ‘Ruth Cooker’, ‘Burks’);
+INSERT INTO table author VALUES (‘2’, ‘Dr Julie’, ‘Smith’);
+INSERT INTO table author VALUES (‘3’, ‘Katherine’, ‘Boo’);
+INSERT INTO table author VALUES (‘4’, ‘Steven D.’, ‘Levitt’)
+INSERT INTO table author VALUES (‘5’, ‘Andrew’, ‘Solomon’);
+INSERT INTO table author VALUES (‘6’, ‘Cathy Park’, ‘Hong’);
+INSERT INTO table author VALUES (‘7’, ‘Michael’, ‘Pollen’);
+INSERT INTO table author VALUES (‘8’, ‘Eric’, ‘Schlosser’);
+INSERT INTO table author VALUES (‘9’, ‘Rachel’, ‘Carson’);
+INSERT INTO table author VALUES (‘10’, ‘Annie’, ‘Dillard’);
 
 ---------------------------INSERT LOAN VALUES----------------------------
 
