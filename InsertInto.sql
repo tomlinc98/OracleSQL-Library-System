@@ -1,7 +1,9 @@
+insert into author (id, first_name, last_name) values (294283067485611893977967715080454430291, 'Gricelda', 'Luebbers');
+
 ---------------------------INSERT BOOK VALUES----------------------------
 
-INSERT INTO table book VALUES (‘9781409189121’, 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', ''21-jan-2021'', '5');Ruth cooker burks lifestyle
-INSERT INTO TABLE book VALUES (‘9780241529713’, 'Why has nobody told me this before?', 'B4', ''06-jan-2022'', '11');Dr julie smith lifestyle
+INSERT INTO table book (isbn, title, location_code, publication_date, stock, catagory_id) VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', '21-jan-2021', '5'); Ruth cooker burks lifestyle
+INSERT INTO TABLE book VALUES (‘9780241529713’, 'Why has nobody told me this before?', 'B4', ''06-jan-2022'', '11');Dr Julie Smith Lifestyle
 INSERT INTO TABLE book VALUES (‘9781846274510’, ‘behind the beautiful forevers: Life, death AND hope IN a mumbai undercity’ , ‘d8’ , “07-feb-2013“, ‘6’);Katherine boo non-fiction
 INSERT INTO TABLE book VALUES (‘9780141019017’, ‘freakonomics: A rogue economist explores the hidden side OF everything’ , ‘e3’ , “18-jun-2007“, ‘2’);Steven d. levitt economics
 INSERT INTO TABLE book VALUES (‘9780099460992’, ‘far FROM the tree: Parents, children, AND the search FOR identity’ , ‘j1’ , “06-mar-2014”, ‘15’);Andrew solomon parenting
@@ -37,16 +39,16 @@ INSERT INTO table copy VALUES (‘9’, ‘9780195069976’, );
 INSERT INTO table copy VALUES (‘10’,‘9781848250789’,);
 
 --------------------------INSERT AUTHOR VALUES--------------------------
-INSERT INTO table author VALUES (‘1’, ‘Ruth Cooker’, ‘Burks’);
-INSERT INTO table author VALUES (‘2’, ‘Dr Julie’, ‘Smith’);
-INSERT INTO table author VALUES (‘3’, ‘Katherine’, ‘Boo’);
-INSERT INTO table author VALUES (‘4’, ‘Steven D.’, ‘Levitt’)
-INSERT INTO table author VALUES (‘5’, ‘Andrew’, ‘Solomon’);
-INSERT INTO table author VALUES (‘6’, ‘Cathy Park’, ‘Hong’);
-INSERT INTO table author VALUES (‘7’, ‘Michael’, ‘Pollen’);
-INSERT INTO table author VALUES (‘8’, ‘Eric’, ‘Schlosser’);
-INSERT INTO table author VALUES (‘9’, ‘Rachel’, ‘Carson’);
-INSERT INTO table author VALUES (‘10’, ‘Annie’, ‘Dillard’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘1’, ‘Ruth Cooker’, ‘Burks’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘2’, ‘Dr Julie’, ‘Smith’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘3’, ‘Katherine’, ‘Boo’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘4’, ‘Steven D.’, ‘Levitt’)
+INSERT INTO table author (id, first_name, last_name) VALUES (‘5’, ‘Andrew’, ‘Solomon’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘6’, ‘Cathy Park’, ‘Hong’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘7’, ‘Michael’, ‘Pollen’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘8’, ‘Eric’, ‘Schlosser’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘9’, ‘Rachel’, ‘Carson’);
+INSERT INTO table author (id, first_name, last_name) VALUES (‘10’, ‘Annie’, ‘Dillard’);
 
 ---------------------------INSERT LOAN VALUES----------------------------
 
