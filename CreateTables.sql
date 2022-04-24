@@ -28,7 +28,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         stock                          INTEGER,
         catagory_id                    NUMBER,
         CONSTRAINT book_isbn_pk
-            PRIMARY KEY(isbn)
+            PRIMARY KEY(isbn),
         CONSTRAINT book_catagory_id_fk
             FOREIGN KEY (catagory_id)
             REFERENCES catagory(id)
