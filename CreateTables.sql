@@ -24,7 +24,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         id                             NUMBER NOT NULL,
         cat_name                       VARCHAR2(30),
         CONSTRAINT catagory_id_pk 
-            PRIMARY KEY(id),
+            PRIMARY KEY(id)
 );
 
     CREATE TABLE book (
