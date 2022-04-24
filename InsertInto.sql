@@ -24,7 +24,7 @@ INSERT INTO table category VALUES (‘6’, ‘9781984820389’, ‘asian-americ
 INSERT INTO table category VALUES (‘7’, ‘9781594200823’, ‘food & nutrition’);
 INSERT INTO table category VALUES (‘8’, ‘9780141006871’, ‘food & nutrition’);
 INSERT INTO table category VALUES (‘9’, ‘9780195069976’, ‘nature’);
-INSERT INTO table category VALUES (‘10’,‘9781848250789’, ‘religion’);
+INSERT INTO table category VALUES (‘10’,’9781848250789’, ‘religion’);
 
 ---------------------------INSERT COPY VALUES----------------------------
 INSERT INTO table copy VALUES (‘1’, ‘9781409189121’, ''25-jan-2021'', '''');
@@ -36,10 +36,10 @@ INSERT INTO table copy VALUES (‘6’, ‘9781984820389’, );
 INSERT INTO table copy VALUES (‘7’, ‘9781594200823’,);
 INSERT INTO table copy VALUES (‘8’, ‘9780141006871’, );
 INSERT INTO table copy VALUES (‘9’, ‘9780195069976’, );
-INSERT INTO table copy VALUES (‘10’,‘9781848250789’,);
+INSERT INTO table copy VALUES (‘10’,’9781848250789’,);
 
 --------------------------INSERT AUTHOR VALUES--------------------------
-INSERT INTO author (id, first_name, last_name) VALUES (‘1’, ‘Ruth Cooker’, ‘Burks’);
+INSERT INTO author (id, first_name, last_name) VALUES ('1', ‘Ruth Cooker’, ‘Burks’);
 INSERT INTO author (id, first_name, last_name) VALUES (‘2’, ‘Dr Julie’, ‘Smith’);
 INSERT INTO author (id, first_name, last_name) VALUES (‘3’, ‘Katherine’, ‘Boo’);
 INSERT INTO author (id, first_name, last_name) VALUES (‘4’, ‘Steven D.’, ‘Levitt’)
