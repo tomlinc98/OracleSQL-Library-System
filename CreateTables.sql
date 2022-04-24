@@ -167,3 +167,10 @@ ALTER TABLE reservation
     CONSTRAINT status_type
     CHECK (res_status in('AVAILABLE','RESERVED'))
 );
+
+------------------------------ALTER TABLE------------------------------
+
+ALTER TABLE book  
+    ADD CONSTRAINT book_catagory_id_fk
+        FOREIGN KEY (catagory_id)
+        REFERENCES catagory(id)
