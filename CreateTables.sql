@@ -20,7 +20,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
 
 ------------------------------CREATE TABLES------------------------------
     
-    CREATE TABLE catagory (
+    CREATE TABLE category (
         id                             NUMBER NOT NULL,
         cat_name                       VARCHAR2(30),
         CONSTRAINT catagory_id_pk 
