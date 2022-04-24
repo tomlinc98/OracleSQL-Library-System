@@ -25,10 +25,10 @@ INSERT ALL
            VALUES ('9780141006871', 'Fast Food Nation: What the all-american meal is doing to the world' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '1')
            
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780195069976', 'The sea around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY', '1')
+           VALUES ('9780195069976', 'The Sea Around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY', '1')
            
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781848250789', 'Pilgrim AT tinker creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY', '4');
+           VALUES ('9781848250789', 'Pilgrim at Tinker Creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY', '4');
 
 -------------------------INSERT CATAGORY VALUES--------------------------
 INSERT ALL
