@@ -1,7 +1,7 @@
 -------------------------------DROP TABLES-------------------------------
 
 DROP TABLE book;
-DROP TABLE catagory;
+DROP TABLE category;
 DROP TABLE copy;
 DROP TABLE author;
 DROP TABLE publisher;
