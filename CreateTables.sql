@@ -30,7 +30,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT book_isbn_pk
             PRIMARY KEY(isbn),
         CONSTRAINT book_catagory_id_fk
-            FOREIGN KEY (catagory_id)
+            FOREIGN KEY(catagory_id)
             REFERENCES catagory(id)
 );
 
@@ -112,7 +112,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
             PRIMARY KEY(id),
         CONSTRAINT reservation_users_id_fk
             FOREIGN KEY(users_id)
-            REFERENCES users (id) ON DELETE CASCADE,
+            REFERENCES users(id) ON DELETE CASCADE,
         CONSTRAINT reservation_book_isbn_fk
             FOREIGN KEY(book_isbn)
             REFERENCES book(isbn) ON DELETE CASCADE
@@ -139,13 +139,15 @@ CREATE SCHEMA AUTHORIZATION library_admin
         fine_date                      DATE NOT NULL,
         fine_total                     NUMBER,
         users_id                       NUMBER,
-        loan_id
+        loan_id                        NUMBER,
         CONSTRAINT fine_id_pk
             PRIMARY KEY(id),
         CONSTRAINT fine_users_id_fk
             FOREIGN KEY(users_id)
             REFERENCES users(id) ON DELETE CASCADE
         CONSTRAINT fine_loan_id_fk
+            FOREIGN KEY(loan_id)
+            REFERENCES loan(id) ON DELETE CASCADE
 );
 
     CREATE TABLE fine_payment (
@@ -154,7 +156,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         pay_date                       DATE,
         pay_amount                     NUMBER,
         CONSTRAINT fine_payment_id_pk 
-            PRIMARY KEY (id),
+            PRIMARY KEY(id),
         CONSTRAINT fine_payment_users_id_fk
             FOREIGN KEY(users_id)  
             REFERENCES users(id) ON DELETE CASCADE
