@@ -1,47 +1,47 @@
 ---------------------------INSERT BOOK VALUES----------------------------
 INSERT ALL
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', TO_DATE('21-JAN-2021', 'DD-MON-YYYY'), '5')
+           VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', TO_DATE('21-JAN-2021', 'DD-MON-YYYY'), '1')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780241529713', 'Why has nobody told me this before?', 'B4', TO_DATE('06-JAN-2022', 'DD-MON-YYYY'), '11')
+           VALUES ('9780241529713', 'Why has nobody told me this before?', 'B4', TO_DATE('06-JAN-2022', 'DD-MON-YYYY'), '1')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781846274510', 'Behind the Beautiful Forevers: Life, death and hope in a mumbai undercity' , 'D8' , TO_DATE('07-FEB-2013', 'DD-MON-YYYY'), '6')
+           VALUES ('9781846274510', 'Behind the Beautiful Forevers: Life, Death and Hope in a Mumbai Undercity' , 'D8' , TO_DATE('07-FEB-2013', 'DD-MON-YYYY'), '3')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780141019017', 'Freakonomics: A rogue economist explores the hidden side of everything' , 'E3' , TO_DATE('18-JUN-2007', 'DD-MON-YYYY'), '2')
+           VALUES ('9780141019017', 'Freakonomics: A Rogue Economist Explores The Hidden Side Of Everything' , 'E3' , TO_DATE('18-JUN-2007', 'DD-MON-YYYY'), '4')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780099460992', 'Far from the Tree: Parents, children, and the search for identity' , 'J1' , TO_DATE('06-MAR-2014', 'DD-MON-YYYY'), '15')
+           VALUES ('9780099460992', 'Far from the Tree: Parents, Children, and the Search for Identity' , 'J1' , TO_DATE('06-MAR-2014', 'DD-MON-YYYY'), '5')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781984820389', 'Minor feelings: An asian american reckoning' , 'A8' , TO_DATE('05-MAR-2020', 'DD-MON-YYYY'), '9')
+           VALUES ('9781984820389', 'Minor Feelings: An Asian American Reckoning' , 'A8' , TO_DATE('05-MAR-2020', 'DD-MON-YYYY'), '6')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781594200823', 'The Omnivore’s Dilemma: A natural history of four meals' , 'F3' , TO_DATE('11-APR-2006', 'DD-MON-YYYY'), '3')
+           VALUES ('9781594200823', 'The Omnivore’s Dilemma: A Natural History of Four Meals' , 'F3' , TO_DATE('11-APR-2006', 'DD-MON-YYYY'), '7')
            
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780141006871', 'Fast Food Nation: What the all-american meal is doing to the world' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '1')
+           VALUES ('9780141006871', 'Fast Food Nation: What The All-American Meal Is Doing To The World' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '7')
            
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780195069976', 'The Sea Around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY', '1')
+           VALUES ('9780195069976', 'The Sea around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY', '9')
            
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781848250789', 'Pilgrim at Tinker Creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY', '4');
+           VALUES ('9781848250789', 'Pilgrim at Tinker creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY', '10');
 
 -------------------------INSERT CATAGORY VALUES--------------------------
 INSERT ALL
-INSERT INTO TABLE category VALUES (‘1’, ‘9781409189121’, ‘lifestyle’)
-INSERT INTO table category VALUES (‘2’, ‘9780241529713’, 'Lifestyle');
-INSERT INTO table category VALUES (‘3’, ‘9781846274510’, ‘non-fiction’);
-INSERT INTO table category VALUES (‘4’, ‘9780141019017’, ‘economics’);
-INSERT INTO table category VALUES (‘5’, ‘9780099460992’, ‘parenting’);
-INSERT INTO table category VALUES (‘6’, ‘9781984820389’, ‘asian-american literature’);
-INSERT INTO table category VALUES (‘7’, ‘9781594200823’, ‘food & nutrition’);
-INSERT INTO table category VALUES (‘8’, ‘9780141006871’, ‘food & nutrition’);
-INSERT INTO table category VALUES (‘9’, ‘9780195069976’, ‘nature’);
-INSERT INTO table category VALUES (‘10’,’9781848250789’, ‘religion’);
+INSERT INTO TABLE category VALUES (‘1’, ‘9781409189121’, 'Lifestyle');
+INSERT INTO table category VALUES (‘2’, ‘9780241529713’, 'Fiction');
+INSERT INTO table category VALUES (‘3’, ‘9781846274510’, 'Non-Fiction');
+INSERT INTO table category VALUES (‘4’, ‘9780141019017’, 'Economics');
+INSERT INTO table category VALUES (‘5’, ‘9780099460992’, 'Parenting');
+INSERT INTO table category VALUES (‘6’, ‘9781984820389’, 'Asian-American Literature');
+INSERT INTO table category VALUES (‘7’, ‘9781594200823’, 'Food & Nutrition');
+INSERT INTO table category VALUES (‘8’, ‘9780141006871’, 'Crime');
+INSERT INTO table category VALUES (‘9’, ‘9780195069976’, 'Nature');
+INSERT INTO table category VALUES (‘10’,’9781848250789’, 'Religion');
 
 ---------------------------INSERT COPY VALUES----------------------------
 INSERT INTO table copy VALUES (‘1’, ‘9781409189121’, ''25-jan-2021'', '''');
