@@ -8,8 +8,8 @@ INSERT INTO TABLE book VALUES ('9780099460992', 'Far from the Tree: Parents, chi
 INSERT INTO TABLE book VALUES ('9781984820389', 'Minor feelings: An asian american reckoning' , 'A8' , TO_DATE('05-MAR-2020', 'DD-MON-YYYY'), '9');
 INSERT INTO TABLE book VALUES ('9781594200823', 'The Omnivore’s Dilemma: A natural history of four meals' , 'F3' , TO_DATE('11-APR-2006', 'DD-MON-YYYY'), '3');
 INSERT INTO TABLE book VALUES ('9780141006871', 'Fast Food Nation: What the all-american meal is doing to the world' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '1');
-INSERT INTO TABLE book VALUES ('9780195069976', 'The sea around us', 'i2' , '2-jul-1951', '1');
-INSERT INTO TABLE book VALUES ('9781848250789', 'Pilgrim AT tinker creek' , 'r5' , '2-jul-1974', '4');
+INSERT INTO TABLE book VALUES ('9780195069976', 'The sea around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY', '1');
+INSERT INTO TABLE book VALUES ('9781848250789', 'Pilgrim AT tinker creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY', '4');
 
 -------------------------INSERT CATAGORY VALUES--------------------------
 
