@@ -47,7 +47,7 @@ INSERT INTO author (id, first_name, last_name) VALUES ('5', 'Andrew', 'Solomon')
 INSERT INTO author (id, first_name, last_name) VALUES ('6', 'Cathy Park', 'Hong');
 INSERT INTO author (id, first_name, last_name) VALUES ('7', 'Michael', 'Pollen');
 INSERT INTO author (id, first_name, last_name) VALUES ('8', 'Eric', 'Schlosser');
-INSERT INTO author (id, first_name, last_name) VALUES ('9’', 'Rachel', 'Carson');
+INSERT INTO author (id, first_name, last_name) VALUES ('9', 'Rachel', 'Carson');
 INSERT INTO author (id, first_name, last_name) VALUES ('10', 'Annie', 'Dillard');
 
 ---------------------------INSERT LOAN VALUES----------------------------
