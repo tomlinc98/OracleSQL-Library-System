@@ -19,6 +19,7 @@ DROP TABLE fine_payment;
 CREATE SCHEMA AUTHORIZATION library_admin
 
 ------------------------------CREATE TABLES------------------------------
+    
     CREATE TABLE catagory (
         id                             NUMBER NOT NULL,
         cat_name                       VARCHAR2(30),
