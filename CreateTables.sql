@@ -144,7 +144,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
             PRIMARY KEY(id),
         CONSTRAINT fine_users_id_fk
             FOREIGN KEY(users_id)
-            REFERENCES users(id) ON DELETE CASCADE
+            REFERENCES users(id) ON DELETE CASCADE,
         CONSTRAINT fine_loan_id_fk
             FOREIGN KEY(loan_id)
             REFERENCES loan(id) ON DELETE CASCADE
