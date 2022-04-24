@@ -39,16 +39,16 @@ INSERT INTO table copy VALUES (‘9’, ‘9780195069976’, );
 INSERT INTO table copy VALUES (‘10’,‘9781848250789’,);
 
 --------------------------INSERT AUTHOR VALUES--------------------------
-INSERT INTO table author (id, first_name, last_name) VALUES (‘1’, ‘Ruth Cooker’, ‘Burks’);
-INSERT INTO table author (id, first_name, last_name) VALUES (‘2’, ‘Dr Julie’, ‘Smith’);
-INSERT INTO table author (id, first_name, last_name) VALUES (‘3’, ‘Katherine’, ‘Boo’);
-INSERT INTO table author (id, first_name, last_name) VALUES (‘4’, ‘Steven D.’, ‘Levitt’)
-INSERT INTO table author (id, first_name, last_name) VALUES (‘5’, ‘Andrew’, ‘Solomon’);
-INSERT INTO table author (id, first_name, last_name) VALUES (‘6’, ‘Cathy Park’, ‘Hong’);
-INSERT INTO table author (id, first_name, last_name) VALUES (‘7’, ‘Michael’, ‘Pollen’);
-INSERT INTO table author (id, first_name, last_name) VALUES (‘8’, ‘Eric’, ‘Schlosser’);
-INSERT INTO table author (id, first_name, last_name) VALUES (‘9’, ‘Rachel’, ‘Carson’);
-INSERT INTO table author (id, first_name, last_name) VALUES (‘10’, ‘Annie’, ‘Dillard’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘1’, ‘Ruth Cooker’, ‘Burks’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘2’, ‘Dr Julie’, ‘Smith’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘3’, ‘Katherine’, ‘Boo’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘4’, ‘Steven D.’, ‘Levitt’)
+INSERT INTO author (id, first_name, last_name) VALUES (‘5’, ‘Andrew’, ‘Solomon’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘6’, ‘Cathy Park’, ‘Hong’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘7’, ‘Michael’, ‘Pollen’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘8’, ‘Eric’, ‘Schlosser’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘9’, ‘Rachel’, ‘Carson’);
+INSERT INTO author (id, first_name, last_name) VALUES (‘10’, ‘Annie’, ‘Dillard’);
 
 ---------------------------INSERT LOAN VALUES----------------------------
 
