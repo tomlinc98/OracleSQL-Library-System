@@ -1,18 +1,37 @@
 ---------------------------INSERT BOOK VALUES----------------------------
+INSERT ALL
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', TO_DATE('21-JAN-2021', 'DD-MON-YYYY'), '5')
 
-INSERT INTO table book (isbn, title, location_code, publication_date, stock, catagory_id) VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', TO_DATE('21-JAN-2021', 'DD-MON-YYYY'), '5');
-INSERT INTO TABLE book VALUES ('9780241529713', 'Why has nobody told me this before?', 'B4', TO_DATE('06-JAN-2022', 'DD-MON-YYYY'), '11');
-INSERT INTO TABLE book VALUES ('9781846274510', 'Behind the Beautiful Forevers: Life, death and hope in a mumbai undercity' , 'D8' , TO_DATE('07-FEB-2013', 'DD-MON-YYYY'), '6');
-INSERT INTO TABLE book VALUES ('9780141019017', 'Freakonomics: A rogue economist explores the hidden side of everything' , 'E3' , TO_DATE('18-JUN-2007', 'DD-MON-YYYY'), '2');
-INSERT INTO TABLE book VALUES ('9780099460992', 'Far from the Tree: Parents, children, and the search for identity' , 'J1' , TO_DATE('06-MAR-2014', 'DD-MON-YYYY'), '15');
-INSERT INTO TABLE book VALUES ('9781984820389', 'Minor feelings: An asian american reckoning' , 'A8' , TO_DATE('05-MAR-2020', 'DD-MON-YYYY'), '9');
-INSERT INTO TABLE book VALUES ('9781594200823', 'The Omnivore’s Dilemma: A natural history of four meals' , 'F3' , TO_DATE('11-APR-2006', 'DD-MON-YYYY'), '3');
-INSERT INTO TABLE book VALUES ('9780141006871', 'Fast Food Nation: What the all-american meal is doing to the world' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '1');
-INSERT INTO TABLE book VALUES ('9780195069976', 'The sea around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY', '1');
-INSERT INTO TABLE book VALUES ('9781848250789', 'Pilgrim AT tinker creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY', '4');
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9780241529713', 'Why has nobody told me this before?', 'B4', TO_DATE('06-JAN-2022', 'DD-MON-YYYY'), '11')
+
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9781846274510', 'Behind the Beautiful Forevers: Life, death and hope in a mumbai undercity' , 'D8' , TO_DATE('07-FEB-2013', 'DD-MON-YYYY'), '6')
+
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9780141019017', 'Freakonomics: A rogue economist explores the hidden side of everything' , 'E3' , TO_DATE('18-JUN-2007', 'DD-MON-YYYY'), '2')
+
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9780099460992', 'Far from the Tree: Parents, children, and the search for identity' , 'J1' , TO_DATE('06-MAR-2014', 'DD-MON-YYYY'), '15')
+
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9781984820389', 'Minor feelings: An asian american reckoning' , 'A8' , TO_DATE('05-MAR-2020', 'DD-MON-YYYY'), '9')
+
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9781594200823', 'The Omnivore’s Dilemma: A natural history of four meals' , 'F3' , TO_DATE('11-APR-2006', 'DD-MON-YYYY'), '3')
+           
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9780141006871', 'Fast Food Nation: What the all-american meal is doing to the world' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '1')
+           
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9780195069976', 'The sea around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY', '1')
+           
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9781848250789', 'Pilgrim AT tinker creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY', '4');
 
 -------------------------INSERT CATAGORY VALUES--------------------------
-
+INSERT ALL
 INSERT INTO TABLE category VALUES (‘1’, ‘9781409189121’, ‘lifestyle’)
 INSERT INTO table category VALUES (‘2’, ‘9780241529713’, 'Lifestyle');
 INSERT INTO table category VALUES (‘3’, ‘9781846274510’, ‘non-fiction’);
@@ -37,16 +56,17 @@ INSERT INTO table copy VALUES (‘9’, ‘9780195069976’, );
 INSERT INTO table copy VALUES (‘10’,’9781848250789’,);
 
 --------------------------INSERT AUTHOR VALUES--------------------------
-INSERT INTO author (id, first_name, last_name) VALUES ('1', 'Ruth Cooker', 'Burks');
-INSERT INTO author (id, first_name, last_name) VALUES ('2', 'Dr Julie', 'Smith');
-INSERT INTO author (id, first_name, last_name) VALUES ('3', 'Katherine', 'Boo');
-INSERT INTO author (id, first_name, last_name) VALUES ('4', 'Steven D.', 'Levitt')
-INSERT INTO author (id, first_name, last_name) VALUES ('5', 'Andrew', 'Solomon');
-INSERT INTO author (id, first_name, last_name) VALUES ('6', 'Cathy Park', 'Hong');
-INSERT INTO author (id, first_name, last_name) VALUES ('7', 'Michael', 'Pollen');
-INSERT INTO author (id, first_name, last_name) VALUES ('8', 'Eric', 'Schlosser');
-INSERT INTO author (id, first_name, last_name) VALUES ('9', 'Rachel', 'Carson');
-INSERT INTO author (id, first_name, last_name) VALUES ('10', 'Annie', 'Dillard');
+INSERT ALL
+           INTO author (id, first_name, last_name) VALUES ('1', 'Ruth Cooker', 'Burks')
+           INTO author (id, first_name, last_name) VALUES ('2', 'Dr Julie', 'Smith')
+           INTO author (id, first_name, last_name) VALUES ('3', 'Katherine', 'Boo')
+           INTO author (id, first_name, last_name) VALUES ('4', 'Steven D.', 'Levitt')
+           INTO author (id, first_name, last_name) VALUES ('5', 'Andrew', 'Solomon')
+           INTO author (id, first_name, last_name) VALUES ('6', 'Cathy Park', 'Hong')
+           INTO author (id, first_name, last_name) VALUES ('7', 'Michael', 'Pollen')
+           INTO author (id, first_name, last_name) VALUES ('8', 'Eric', 'Schlosser')
+           INTO author (id, first_name, last_name) VALUES ('9', 'Rachel', 'Carson')
+           INTO author (id, first_name, last_name) VALUES ('10', 'Annie', 'Dillard');
 
 ---------------------------INSERT LOAN VALUES----------------------------
 
