@@ -19,6 +19,12 @@ DROP TABLE fine_payment;
 CREATE SCHEMA AUTHORIZATION library_admin
 
 ------------------------------CREATE TABLES------------------------------
+    CREATE TABLE catagory (
+        id                             NUMBER NOT NULL,
+        cat_name                       VARCHAR2(30),
+        CONSTRAINT catagory_id_pk 
+            PRIMARY KEY(id),
+);
 
     CREATE TABLE book (
         isbn                           NUMBER NOT NULL,
@@ -32,13 +38,6 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT book_catagory_id_fk
             FOREIGN KEY(catagory_id)
             REFERENCES catagory(id)
-);
-
-    CREATE TABLE catagory (
-        id                             NUMBER NOT NULL,
-        cat_name                       VARCHAR2(30),
-        CONSTRAINT catagory_id_pk 
-            PRIMARY KEY(id),
 );
 
     CREATE TABLE copy (
