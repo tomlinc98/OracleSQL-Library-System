@@ -1,34 +1,36 @@
 ---------------------------INSERT BOOK VALUES----------------------------
 INSERT ALL
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', TO_DATE('21-JAN-2021', 'DD-MON-YYYY'), '1')
+           VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', TO_DATE('21-JAN-2021', 'DD-MON-YYYY'), '5', '1')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780241529713', 'Why has nobody told me this before?', 'B4', TO_DATE('06-JAN-2022', 'DD-MON-YYYY'), '1')
+           VALUES ('9780241529713', 'Why has nobody told me this before?', 'B4', TO_DATE('06-JAN-2022', 'DD-MON-YYYY'), '11', '1')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781846274510', 'Behind the Beautiful Forevers: Life, Death and Hope in a Mumbai Undercity' , 'D8' , TO_DATE('07-FEB-2013', 'DD-MON-YYYY'), '3')
+           VALUES ('9781846274510', 'Behind the Beautiful Forevers: Life, Death and Hope in a Mumbai Undercity' , 'D8' , TO_DATE('07-FEB-2013', 'DD-MON-YYYY'), '6', '3')
 
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780141019017', 'Freakonomics: A Rogue Economist Explores The Hidden Side Of Everything' , 'E3' , TO_DATE('18-JUN-2007', 'DD-MON-YYYY'), '4')
-
-           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780099460992', 'Far from the Tree: Parents, Children, and the Search for Identity' , 'J1' , TO_DATE('06-MAR-2014', 'DD-MON-YYYY'), '5')
-
-           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781984820389', 'Minor Feelings: An Asian American Reckoning' , 'A8' , TO_DATE('05-MAR-2020', 'DD-MON-YYYY'), '6')
-
-           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781594200823', 'The Omnivore’s Dilemma: A Natural History of Four Meals' , 'F3' , TO_DATE('11-APR-2006', 'DD-MON-YYYY'), '7')
+           VALUES ('9780141019017', 'Freakonomics: A Rogue Economist Explores The Hidden Side Of Everything' , 'E3' , TO_DATE('18-JUN-2007', 'DD-MON-YYYY'), '2', '4')
            
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780141006871', 'Fast Food Nation: What The All-American Meal Is Doing To The World' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '7')
+           VALUES ('9780099460992', 'Far from the Tree: Parents, Children, and the Search for Identity' , 'J1' , TO_DATE('06-MAR-2014', 'DD-MON-YYYY'), '15', '5')
+
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9781984820389', 'Minor Feelings: An Asian American Reckoning' , 'A8' , TO_DATE('05-MAR-2020', 'DD-MON-YYYY'), '9', '6')
+
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9781594200823', 'The Omnivore’s Dilemma: A Natural History of Four Meals' , 'F3' , TO_DATE('11-APR-2006', 'DD-MON-YYYY'), '3', '7')
            
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9780195069976', 'The Sea around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY', '9')
+           VALUES ('9780141006871', 'Fast Food Nation: What The All-American Meal Is Doing To The World' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '1', '7')
            
            INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
-           VALUES ('9781848250789', 'Pilgrim at Tinker creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY', '10');
+           VALUES ('9780195069976', 'The Sea around us', 'I2' , TO_DATE('02-JUL-1951', 'DD-MON-YYYY'), '1', '9')
+           
+           INTO book (isbn, title, location_code, publication_date, stock, catagory_id) 
+           VALUES ('9781848250789', 'Pilgrim at Tinker creek' , 'R5' , TO_DATE('02-JUL-1974', 'DD-MON-YY'), '4', '10')
+                   
+SELECT 1 FROM dual;
 
 -------------------------INSERT CATAGORY VALUES--------------------------
 INSERT ALL
