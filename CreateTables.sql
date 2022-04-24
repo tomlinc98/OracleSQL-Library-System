@@ -23,7 +23,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
     CREATE TABLE category (
         id                             NUMBER NOT NULL,
         cat_name                       VARCHAR2(30),
-        CONSTRAINT catagory_id_pk 
+        CONSTRAINT category_id_pk 
             PRIMARY KEY(id)
 );
 
@@ -33,12 +33,12 @@ CREATE SCHEMA AUTHORIZATION library_admin
         location_code                  VARCHAR2(10) NOT NULL,
         publication_date               DATE,
         stock                          NUMBER,
-        catagory_id                    NUMBER,
+        category_id                    NUMBER,
         CONSTRAINT book_isbn_pk
             PRIMARY KEY(isbn),
-        CONSTRAINT book_catagory_id_fk
-            FOREIGN KEY(catagory_id)
-            REFERENCES catagory(id)
+        CONSTRAINT book_category_id_fk
+            FOREIGN KEY(category_id)
+            REFERENCES category(id)
 );
 
     CREATE TABLE copy (
