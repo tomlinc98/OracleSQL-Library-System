@@ -36,13 +36,9 @@ CREATE SCHEMA AUTHORIZATION library_admin
 
     CREATE TABLE catagory (
         id                             NUMBER NOT NULL,
-        book_isbn                      NUMBER,
         cat_name                       VARCHAR2(30),
         CONSTRAINT catagory_id_pk 
             PRIMARY KEY(id),
-        CONSTRAINT catagory_book_isbn_fk
-            FOREIGN KEY(book_isbn) 
-            REFERENCES book(isbn) ON DELETE CASCADE
 );
 
     CREATE TABLE copy (
