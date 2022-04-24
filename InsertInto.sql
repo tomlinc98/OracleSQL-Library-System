@@ -34,16 +34,37 @@ SELECT 1 FROM dual;
 
 -------------------------INSERT CATAGORY VALUES--------------------------
 INSERT ALL
-INSERT INTO TABLE category VALUES (‘1’, ‘9781409189121’, 'Lifestyle');
-INSERT INTO table category VALUES (‘2’, ‘9780241529713’, 'Fiction');
-INSERT INTO table category VALUES (‘3’, ‘9781846274510’, 'Non-Fiction');
-INSERT INTO table category VALUES (‘4’, ‘9780141019017’, 'Economics');
-INSERT INTO table category VALUES (‘5’, ‘9780099460992’, 'Parenting');
-INSERT INTO table category VALUES (‘6’, ‘9781984820389’, 'Asian-American Literature');
-INSERT INTO table category VALUES (‘7’, ‘9781594200823’, 'Food & Nutrition');
-INSERT INTO table category VALUES (‘8’, ‘9780141006871’, 'Crime');
-INSERT INTO table category VALUES (‘9’, ‘9780195069976’, 'Nature');
-INSERT INTO table category VALUES (‘10’,’9781848250789’, 'Religion');
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘1’, ‘9781409189121’, 'Lifestyle')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘2’, ‘9780241529713’, 'Fiction')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘3’, ‘9781846274510’, 'Non-Fiction')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘4’, ‘9780141019017’, 'Economics')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘5’, ‘9780099460992’, 'Parenting')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘6’, ‘9781984820389’, 'Asian-American Literature')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘7’, ‘9781594200823’, 'Food & Nutrition')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘8’, ‘9780141006871’, 'Crime')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘9’, ‘9780195069976’, 'Nature')
+           
+           INTO category (id, book_isbn, cat_name)
+           VALUES (‘10’,’9781848250789’, 'Religion')
+
+SELECT 1 FROM dual;
 
 ---------------------------INSERT COPY VALUES----------------------------
 INSERT INTO table copy VALUES (‘1’, ‘9781409189121’, ''25-jan-2021'', '''');
