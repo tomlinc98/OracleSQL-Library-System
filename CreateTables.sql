@@ -25,7 +25,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         title                          VARCHAR2(255) NOT NULL,
         location_code                  VARCHAR2(10) NOT NULL,
         publication_date               DATE,
-        stock                          INTEGER,
+        stock                          NUMBER,
         catagory_id                    NUMBER,
         CONSTRAINT book_isbn_pk
             PRIMARY KEY(isbn),
