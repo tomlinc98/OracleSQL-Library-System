@@ -2,16 +2,16 @@ insert into author (id, first_name, last_name) values (2942830674856118939779677
 
 ---------------------------INSERT BOOK VALUES----------------------------
 
-INSERT INTO table book (isbn, title, location_code, publication_date, stock, catagory_id) VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', '21-jan-2021', '5'); Ruth cooker burks lifestyle
-INSERT INTO TABLE book VALUES (‘9780241529713’, 'Why has nobody told me this before?', 'B4', ''06-jan-2022'', '11');Dr Julie Smith Lifestyle
-INSERT INTO TABLE book VALUES (‘9781846274510’, ‘behind the beautiful forevers: Life, death AND hope IN a mumbai undercity’ , ‘d8’ , “07-feb-2013“, ‘6’);Katherine boo non-fiction
-INSERT INTO TABLE book VALUES (‘9780141019017’, ‘freakonomics: A rogue economist explores the hidden side OF everything’ , ‘e3’ , “18-jun-2007“, ‘2’);Steven d. levitt economics
-INSERT INTO TABLE book VALUES (‘9780099460992’, ‘far FROM the tree: Parents, children, AND the search FOR identity’ , ‘j1’ , “06-mar-2014”, ‘15’);Andrew solomon parenting
-INSERT INTO TABLE book VALUES (‘9781984820389’, ‘minor feelings: An asian american reckoning’ , ‘a8’ , “05-mar-2020”, ‘9’);Cathy park hong asian american literature
-INSERT INTO TABLE book VALUES (‘9781594200823’, ‘the omnivore’s dilemma: A NATURAL history OF four meals’ , ‘f3’ , “11-apr-2006”, ‘3’);Michael pollen food & nutrition
-INSERT INTO TABLE book VALUES (‘9780141006871’, ‘fast food nation: What the ALL-american meal IS doing TO the world’ , ‘f2’ , “04-apr-2002”, ‘1’);Eric schlosser food  & nutrition
-INSERT INTO TABLE book VALUES (‘9780195069976’, ‘the sea around us’ , ‘i2’ , “2-jul-1951”, ‘1’);Rachel carson nature
-INSERT INTO TABLE book VALUES (‘9781848250789’, ‘pilgrim AT tinker creek’ , ‘r5’ , “2-jul-1974”, ‘4’);Annie dillard religion
+INSERT INTO table book (isbn, title, location_code, publication_date, stock, catagory_id) VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', TO_DATE('21-JAN-2021', 'DD-MON-YYYY'), '5');
+INSERT INTO TABLE book VALUES ('9780241529713', 'Why has nobody told me this before?', 'B4', TO_DATE('06-JAN-2022', 'DD-MON-YYYY'), '11');
+INSERT INTO TABLE book VALUES ('9781846274510', 'Behind the Beautiful Forevers: Life, death and hope in a mumbai undercity' , 'D8' , TO_DATE('07-FEB-2013', 'DD-MON-YYYY'), '6');
+INSERT INTO TABLE book VALUES ('9780141019017', 'Freakonomics: A rogue economist explores the hidden side of everything' , 'E3' , TO_DATE('18-JUN-2007', 'DD-MON-YYYY'), '2');
+INSERT INTO TABLE book VALUES ('9780099460992', 'Far from the Tree: Parents, children, and the search for identity' , 'J1' , TO_DATE('06-MAR-2014', 'DD-MON-YYYY'), '15');
+INSERT INTO TABLE book VALUES ('9781984820389', 'Minor feelings: An asian american reckoning' , 'A8' , TO_DATE('05-MAR-2020', 'DD-MON-YYYY'), '9');
+INSERT INTO TABLE book VALUES ('9781594200823', 'The Omnivore’s Dilemma: A natural history of four meals' , 'F3' , TO_DATE('11-APR-2006', 'DD-MON-YYYY'), '3');
+INSERT INTO TABLE book VALUES ('9780141006871', 'Fast Food Nation: What the all-american meal is doing to the world' , 'F2' , TO_DATE('04-APR-2002', 'DD-MON-YYYY'), '1');
+INSERT INTO TABLE book VALUES ('9780195069976', 'The sea around us', 'i2' , '2-jul-1951', '1');
+INSERT INTO TABLE book VALUES ('9781848250789', 'Pilgrim AT tinker creek' , 'r5' , '2-jul-1974', '4');
 
 -------------------------INSERT CATAGORY VALUES--------------------------
 
