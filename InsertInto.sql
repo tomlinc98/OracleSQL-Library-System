@@ -1,5 +1,3 @@
-insert into author (id, first_name, last_name) values (294283067485611893977967715080454430291, 'Gricelda', 'Luebbers');
-
 ---------------------------INSERT BOOK VALUES----------------------------
 
 INSERT INTO table book (isbn, title, location_code, publication_date, stock, catagory_id) VALUES ('9781409189121', 'All the Young Men: How One Woman Risked It All To Care For The Dying', 'B1', TO_DATE('21-JAN-2021', 'DD-MON-YYYY'), '5');
