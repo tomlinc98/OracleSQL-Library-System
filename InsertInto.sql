@@ -34,35 +34,35 @@ SELECT 1 FROM dual;
 
 -------------------------INSERT CATAGORY VALUES--------------------------
 INSERT ALL
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘1’, ‘9781409189121’, 'Lifestyle')
+           INTO category (id, cat_name)
+           VALUES ('1', 'Lifestyle')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘2’, ‘9780241529713’, 'Fiction')
+           INTO category (id, cat_name)
+           VALUES ('2', 'Fiction')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘3’, ‘9781846274510’, 'Non-Fiction')
+           INTO category (id, cat_name)
+           VALUES ('3', 'Non-Fiction')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘4’, ‘9780141019017’, 'Economics')
+           INTO category (id, cat_name)
+           VALUES ('4', 'Economics')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘5’, ‘9780099460992’, 'Parenting')
+           INTO category (id, cat_name)
+           VALUES ('5', 'Parenting')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘6’, ‘9781984820389’, 'Asian-American Literature')
+           INTO category (id, cat_name)
+           VALUES ('6', 'Asian-American Literature')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘7’, ‘9781594200823’, 'Food & Nutrition')
+           INTO category (id, cat_name)
+           VALUES ('7', 'Food & Nutrition')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘8’, ‘9780141006871’, 'Crime')
+           INTO category (id, cat_name)
+           VALUES ('8', 'Crime')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘9’, ‘9780195069976’, 'Nature')
+           INTO category (id, cat_name)
+           VALUES ('9', 'Nature')
            
-           INTO category (id, book_isbn, cat_name)
-           VALUES (‘10’,’9781848250789’, 'Religion')
+           INTO category (id, cat_name)
+           VALUES ('10', 'Religion')
 
 SELECT 1 FROM dual;
 
