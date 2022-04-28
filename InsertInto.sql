@@ -245,53 +245,140 @@ SELECT 1 FROM dual;
 
 ------------------------INSERT PUBLISHER VALUES--------------------------
 
-insert into publisher values ('1', '045689','St.Greens Press');
-insert into publisher values ('2', '032321','Houston Books');
-insert into publisher values ('3', '077789','Sutton Publishing');
-insert into publisher values ('4', '023498','Dr Wall States');
-insert into publisher values ('5', '024567','Radley Press');
-insert into publisher values ('6', '045689','J.B Elton');
-insert into publisher values ('7', '066896','A&F Publishing');
-insert into publisher values ('8', '099034','John Publishing');
-insert into publisher values ('9', '020576','Ford Books');
-insert into publisher values ('10', '068890','Bee Books');        
+INSERT ALL
+           INTO publisher 
+           VALUES ('1', '045689','St.Greens Press')
+           
+           INTO publisher 
+           VALUES ('2', '032321','Houston Books')
+           
+           INTO publisher 
+           VALUES ('3', '077789','Sutton Publishing')
+           
+           INTO publisher 
+           VALUES ('4', '023498','Dr Wall States')
+           
+           INTO publisher 
+           VALUES ('5', '024567','Radley Press')
+           
+           INTO publisher 
+           VALUES ('6', '045689','J.B Elton')
+           
+           INTO publisher 
+           VALUES ('7', '066896','A&F Publishing')
+           
+           INTO publisher 
+           VALUES ('8', '099034','John Publishing')
+           
+           INTO publisher 
+           VALUES ('9', '020576','Ford Books')
+           
+           INTO publisher 
+           VALUES ('10', '068890','Bee Books')
 
+SELECT 1 FROM dual;
 -------------------------INSERT USER VALUES-----------------------------
 
-
-insert into users values ('1', 'Brett','Simmons');
-insert into users values ('2', 'Selena','Johnson');
-insert into users values ('3', 'Gary','Keaton');           
-insert into users values ('4', 'Bobby','Vermon');
-insert into users values ('5', 'John','Black');
-insert into users values ('6', 'Megan','Frasher');           
-insert into users values ('7', 'Samantha','Ruth');           
-insert into users values ('8', 'Tory','Diaz');
-insert into users values ('9', 'Jason','Wayne');           
-insert into users values ('10', 'Kira','Crawford');
+INSERT ALL
+           INTO users 
+           VALUES ('1', 'Brett','Simmons')
+           
+           INTO users 
+           VALUES ('2', 'Selena','Johnson')
+           
+           INTO users 
+           VALUES ('3', 'Gary','Keaton')
+           
+           INTO users 
+           VALUES ('4', 'Bobby','Vermon')
+           
+           INTO users 
+           VALUES ('5', 'John','Black')
+           
+           INTO users 
+           VALUES ('6', 'Megan','Frasher')
+           
+           INTO users 
+           VALUES ('7', 'Samantha','Ruth')
+           
+           INTO users 
+           VALUES ('8', 'Tory','Diaz')
+           
+           INTO users 
+           VALUES ('9', 'Jason','Wayne')
+           
+           INTO users 
+           VALUES ('10', 'Kira','Crawford')
+           
+SELECT 1 FROM dual;
 
 ---------------------INSERT RESERVATION VALUES------------------------
+
+INSERT ALL
+           INTO reservation 
+           VALUES ('1','155662', '16-Jan-2021','9781409189121')
            
-insert into reservation values ('1','155662', '16-Jan-2021','9781409189121');
-insert into reservation values ('2','186742', '8-Jan-2022','9780241529713');
-insert into reservation values ('3','111674', '20-Feb-2021','9781846274510');
-insert into reservation values ('4','1235500', '7-Jul-2019','9780141019017');
-insert into reservation values ('5','144856','4-May-2020','9780099460992');
-insert into reservation values ('6','121550','27-Aug-2021','9781984820389');
-insert into reservation values ('7','100976','30-Sept-2018','9781594200823');
-insert into reservation values ('8','140010','5-Mar-2022','9780141006871');
-insert into reservation values ('9','192325','19-Oct-2021','9780195069976');
-insert into reservation values ('10','130444','15-Dec-2019','9781848250789');
+           INTO reservation 
+           VALUES ('2','186742', '8-Jan-2022','9780241529713')
+           
+           INTO reservation 
+           VALUES ('3','111674', '20-Feb-2021','9781846274510')
+           
+           INTO reservation 
+           VALUES ('4','1235500', '7-Jul-2019','9780141019017')
+           
+           INTO reservation 
+           VALUES ('5','144856','4-May-2020','9780099460992')
+           
+           INTO reservation 
+           VALUES ('6','121550','27-Aug-2021','9781984820389')
+           
+           INTO reservation 
+           VALUES ('7','100976','30-Sept-2018','9781594200823')
+           
+           INTO reservation 
+           VALUES ('8','140010','5-Mar-2022','9780141006871')
+           
+           INTO reservation 
+           VALUES ('9','192325','19-Oct-2021','9780195069976')
+           
+           INTO reservation 
+           VALUES ('10','130444','15-Dec-2019','9781848250789')
+
+SELECT 1 FROM dual;
 
 ------------------INSERT RESERVATION STATUS VALUES--------------------
+
+INSERT ALL
+
+           INTO reservation_status 
+           VALUES ('1', '222946','Reserved')
            
-insert into reservation_status values ('1', '222946','Reserved');
-insert into reservation_status values ('2', '254789','Available');
-insert into reservation_status values ('3', '273554','Reserved');
-insert into reservation_status values ('4', '244770','Available');
-insert into reservation_status values ('5', '200069','Available');
-insert into reservation_status values ('6', '201786','Available');
-insert into reservation_status values ('7', '265093','Reserved');
-insert into reservation_status values ('8', '203340','Available');
-insert into reservation_status values ('9', '288885','Reserved');
-insert into reservation_status values ('10', '220035','Reserved');
+           INTO reservation_status 
+           VALUES ('2', '254789','Available')
+           
+           INTO reservation_status 
+           VALUES ('3', '273554','Reserved')
+           
+           INTO reservation_status 
+           VALUES ('4', '244770','Available')
+           
+           INTO reservation_status 
+           VALUES ('5', '200069','Available')
+           
+           INTO reservation_status
+           VALUES ('6', '201786','Available')
+           
+           INTO reservation_status 
+           VALUES ('7', '265093','Reserved')
+           
+           INTO reservation_status 
+           VALUES ('8', '203340','Available')
+           
+           INTO reservation_status 
+           VALUES ('9', '288885','Reserved')
+           
+           INTO reservation_status 
+           VALUES ('10', '220035','Reserved')
+
+SELECT 1 FROM dual;
