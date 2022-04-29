@@ -72,34 +72,34 @@ SELECT 1 FROM dual;
 
 INSERT ALL
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('1', '9781409189121', '25-JAN-2021');
+           VALUES ('1', '9781409189121', TO_DATE('25-JAN-2021', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('2', '9780241529713',);
+           VALUES ('2', '9780241529713', TO_DATE('10-JUL-2020', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('3', '9781846274510', );
+           VALUES ('3', '9781846274510', TO_DATE('05-SEP-2020', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('4', '9780141019017',);
+           VALUES ('4', '9780141019017', TO_DATE('10-JUL-2020', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('5', '9780099460992',);
+           VALUES ('5', '9780099460992', TO_DATE('12-DEC-2021', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('6', '9781984820389', );
+           VALUES ('6', '9781984820389', TO_DATE('23-MAY-2019', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('7', '9781594200823',);
+           VALUES ('7', '9781594200823', TO_DATE('01-FEB-2018', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('8', '9780141006871', );
+           VALUES ('8', '9780141006871', TO_DATE('19-AUG-2021', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('9', '9780195069976', );
+           VALUES ('9', '9780195069976', TO_DATE('21-JAN-2022', 'DD-MON-YYYY')
            
            INTO table copy (id, book_isbn, date_aquired)
-           VALUES ('10', '9781848250789',);
+           VALUES ('10', '9781848250789', TO_DATE('13-NOV-2021', 'DD-MON-YYYY')
            
 SELECT 1 FROM dual;
 
