@@ -134,7 +134,7 @@ INSERT ALL
            VALUES ('9', 'Rachel', 'Carson')
            
            INTO author (id, first_name, last_name) 
-           VALUES ('10', 'Annie', 'Dillard');
+           VALUES ('10', 'Annie', 'Dillard')
 
 SELECT 1 FROM dual;
 
