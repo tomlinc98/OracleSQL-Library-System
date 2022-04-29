@@ -173,42 +173,178 @@ INSERT ALL
 
 SELECT 1 FROM dual;
 
+-----------------------INSERT BOOK_AUTHOR VALUES-------------------------
+
+INSERT ALL
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9781409189121', '1')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9780241529713', '2')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9781846274510', '3')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9780141019017', '4')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9780099460992', '5')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9781984820389', '6')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9781594200823', '7')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9780141006871', '8')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9780195069976', '9')
+           
+           INTO book_author (book_isbn, author_id)
+           VALUES ('9781848250789', '10')
+           
+SELECT 1 FROM dual;
+           
+----------------------INSERT BOOK_PUBLISHER VALUES-----------------------
+
+INSERT ALL
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9781409189121', '1')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9780241529713', '2')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9781846274510', '3')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9780141019017', '4')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9780099460992', '5')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9781984820389', '6')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9781594200823', '7')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9780141006871', '8')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9780195069976', '9')
+           
+           INTO book_publisher (book_isbn, pub_id)
+           VALUES ('9781848250789', '10')
+
+SELECT 1 FROM dual;
+
+-------------------------INSERT USER VALUES-----------------------------
+
+INSERT ALL
+           INTO users (id, first_name, last_name)
+           VALUES ('1', 'Brett', 'Simmons')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('2', 'Selena', 'Johnson')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('3', 'Gary', 'Keaton')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('4', 'Bobby', 'Vermon')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('5', 'John', 'Black')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('6', 'Megan', 'Frasher')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('7', 'Samantha', 'Ruth')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('8', 'Tory', 'Diaz')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('9', 'Jason', 'Wayne')
+           
+           INTO users (id, first_name, last_name)
+           VALUES ('10', 'Kira', 'Crawford')
+           
+SELECT 1 FROM dual;
+
+---------------------INSERT RESERVATION VALUES------------------------
+
+INSERT ALL
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('1', TO_DATE('16-JAN-2021', 'DD-MON-YYYY'), '1', '9781409189121')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('2', TO_DATE('08-JAN-2022', 'DD-MON-YYYY'), '2', '9780241529713')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('3', TO_DATE('20-FEB-2021', 'DD-MON-YYYY'), '3', '9781846274510')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('4', TO_DATE('07-JUL-2019', 'DD-MON-YYYY'), '4', '9780141019017')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('5', TO_DATE('04-MAY-2020', 'DD-MON-YYYY'), '5', '9780099460992')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('6', TO_DATE('27-AUG-2021', 'DD-MON-YYYY'), '6', '9781984820389')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('7', TO_DATE('30-SEP-2018', 'DD-MON-YYYY'), '7', '9781594200823')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('8', TO_DATE('05-MAR-2022', 'DD-MON-YYYY'), '1', '9780141006871')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('9', TO_DATE('19-OCT-2021', 'DD-MON-YYYY'), '2', '9780195069976')
+           
+           INTO reservation (id, res_date, users_id, book_isbn)
+           VALUES ('10', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '1', '9781848250789')
+
+SELECT 1 FROM dual;
+
 ---------------------------INSERT LOAN VALUES----------------------------
 
 INSERT ALL
-           INTO
----------------------------INSERT LOAN VALUES----------------------------
-
-INSERT ALL
-           INTO loan
-           VALUES('1', '00:00:01', '15:45:06', 1, 1)
+           INTO loan (id, loan_given, loan_return, book_isbn, users_id)
+           VALUES('1', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '1', '9781848250789')
            
            INTO loan 
-           VALUES('2', '03:56:47' '23:34:23' 2, 2)
+           VALUES('2', '03:56:47', '23:34:23', '2', '2')
            
            INTO loan 
-           VALUES('3', '12:30:54', '19:59:34', 3, 3)
+           VALUES('3', '12:30:54', '19:59:34', '3', '3')
            
            INTO loan 
-           VALUES('4', '12:20:00', '04:20:00', 4, 4)
+           VALUES('4', '12:20:00', '04:20:00', '4', '4')
            
            INTO loan 
-           VALUES('5', '10:23:02', '1:23:43', 5, 5)
+           VALUES('5', '10:23:02', '1:23:43', '5', '5')
            
            INTO loan 
-           VALUES('6', '3:12:12', '3:45:34', 6, 6)
+           VALUES('6', '3:12:12', '3:45:34', '6', '6')
            
            INTO loan 
-           VALUES('7', '04:20:00', '04:20:01', 7, 7)
+           VALUES('7', '04:20:00', '04:20:01', '7', '7')
            
            INTO loan 
-           VALUES('8', '05:23:43', '14:32:45', 8, 8)
+           VALUES('8', '05:23:43', '14:32:45', '8', '8')
            
            INTO loan 
-           VALUES('9', '13:34:21', '23:34:54', 9, 9)
+           VALUES('9', '13:34:21', '23:34:54', '9', '9')
            
            INTO loan 
-           VALUES('10', '21:43:34', '15:43:56', 10, 10)
+           VALUES('10', '21:43:34', '15:43:56', '10', '10')
 
 SELECT 1 FROM dual;
 
@@ -280,76 +416,6 @@ INSERT ALL
            INTO fine_payment 
            VALUES ('10','15-10-2018',80, 10)
            
-SELECT 1 FROM dual;
-
--------------------------INSERT USER VALUES-----------------------------
-
-INSERT ALL
-           INTO users 
-           VALUES ('1', 'Brett','Simmons')
-           
-           INTO users 
-           VALUES ('2', 'Selena','Johnson')
-           
-           INTO users 
-           VALUES ('3', 'Gary','Keaton')
-           
-           INTO users 
-           VALUES ('4', 'Bobby','Vermon')
-           
-           INTO users 
-           VALUES ('5', 'John','Black')
-           
-           INTO users 
-           VALUES ('6', 'Megan','Frasher')
-           
-           INTO users 
-           VALUES ('7', 'Samantha','Ruth')
-           
-           INTO users 
-           VALUES ('8', 'Tory','Diaz')
-           
-           INTO users 
-           VALUES ('9', 'Jason','Wayne')
-           
-           INTO users 
-           VALUES ('10', 'Kira','Crawford')
-           
-SELECT 1 FROM dual;
-
----------------------INSERT RESERVATION VALUES------------------------
-
-INSERT ALL
-           INTO reservation 
-           VALUES ('1','155662', '16-Jan-2021','9781409189121')
-           
-           INTO reservation 
-           VALUES ('2','186742', '8-Jan-2022','9780241529713')
-           
-           INTO reservation 
-           VALUES ('3','111674', '20-Feb-2021','9781846274510')
-           
-           INTO reservation 
-           VALUES ('4','1235500', '7-Jul-2019','9780141019017')
-           
-           INTO reservation 
-           VALUES ('5','144856','4-May-2020','9780099460992')
-           
-           INTO reservation 
-           VALUES ('6','121550','27-Aug-2021','9781984820389')
-           
-           INTO reservation 
-           VALUES ('7','100976','30-Sept-2018','9781594200823')
-           
-           INTO reservation 
-           VALUES ('8','140010','5-Mar-2022','9780141006871')
-           
-           INTO reservation 
-           VALUES ('9','192325','19-Oct-2021','9780195069976')
-           
-           INTO reservation 
-           VALUES ('10','130444','15-Dec-2019','9781848250789')
-
 SELECT 1 FROM dual;
 
 ------------------INSERT RESERVATION STATUS VALUES--------------------
