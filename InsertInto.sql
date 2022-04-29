@@ -317,34 +317,22 @@ SELECT 1 FROM dual;
 
 INSERT ALL
            INTO loan (id, loan_given, loan_return, book_isbn, users_id)
-           VALUES('1', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '1', '9781848250789')
+           VALUES('1', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '9781848250789', '1',)
            
-           INTO loan 
-           VALUES('2', '03:56:47', '23:34:23', '2', '2')
+           INTO loan (id, loan_given, loan_return, book_isbn, users_id)
+           VALUES('2', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '9781848250789', '2')
            
-           INTO loan 
-           VALUES('3', '12:30:54', '19:59:34', '3', '3')
+           INTO loan (id, loan_given, loan_return, book_isbn, users_id)
+           VALUES('3', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '3')
            
-           INTO loan 
-           VALUES('4', '12:20:00', '04:20:00', '4', '4')
+           INTO loan (id, loan_given, loan_return, book_isbn, users_id)
+           VALUES('4', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '4')
            
-           INTO loan 
-           VALUES('5', '10:23:02', '1:23:43', '5', '5')
+           INTO loan (id, loan_given, loan_return, book_isbn, users_id)
+           VALUES('5', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '5')
            
-           INTO loan 
-           VALUES('6', '3:12:12', '3:45:34', '6', '6')
-           
-           INTO loan 
-           VALUES('7', '04:20:00', '04:20:01', '7', '7')
-           
-           INTO loan 
-           VALUES('8', '05:23:43', '14:32:45', '8', '8')
-           
-           INTO loan 
-           VALUES('9', '13:34:21', '23:34:54', '9', '9')
-           
-           INTO loan 
-           VALUES('10', '21:43:34', '15:43:56', '10', '10')
+           INTO loan (id, loan_given, loan_return, book_isbn, users_id)
+           VALUES('6', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '6')
 
 SELECT 1 FROM dual;
 
