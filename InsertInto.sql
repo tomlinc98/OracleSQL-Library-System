@@ -138,145 +138,150 @@ INSERT ALL
 
 SELECT 1 FROM dual;
 
+------------------------INSERT PUBLISHER VALUES--------------------------
+
+INSERT ALL
+           INTO publisher (id, pub_name)
+           VALUES ('1', 'St.Greens Press')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('2', 'Houston Books')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('3', 'Sutton Publishing')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('4', 'Dr Wall States')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('5', 'Radley Press')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('6', 'J.B Elton')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('7', 'A&F Publishing')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('8', 'John Publishing')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('9', 'Ford Books')
+           
+           INTO publisher (id, pub_name)
+           VALUES ('10', 'Bee Books')
+
+SELECT 1 FROM dual;
+
 ---------------------------INSERT LOAN VALUES----------------------------
 
 INSERT ALL
-           INTO tblloans 
-           VALUES(1, '00:00:01', '15:45:06', 1, 1)
+           INTO
+---------------------------INSERT LOAN VALUES----------------------------
+
+INSERT ALL
+           INTO loan
+           VALUES('1', '00:00:01', '15:45:06', 1, 1)
            
-           INTO tblloans 
-           VALUES(2, '03:56:47' '23:34:23' 2, 2)
+           INTO loan 
+           VALUES('2', '03:56:47' '23:34:23' 2, 2)
            
-           INTO tblloans 
-           VALUES(3, '12:30:54', '19:59:34', 3, 3)
+           INTO loan 
+           VALUES('3', '12:30:54', '19:59:34', 3, 3)
            
-           INTO tblloans 
-           VALUES(4, '12:20:00', '04:20:00', 4, 4)
+           INTO loan 
+           VALUES('4', '12:20:00', '04:20:00', 4, 4)
            
-           INTO tblloans 
-           VALUES(5, '10:23:02', '1:23:43', 5, 5)
+           INTO loan 
+           VALUES('5', '10:23:02', '1:23:43', 5, 5)
            
-           INTO tblloans 
-           VALUES(6, '3:12:12', '3:45:34', 6, 6)
+           INTO loan 
+           VALUES('6', '3:12:12', '3:45:34', 6, 6)
            
-           INTO tblloans 
-           VALUES(7, '04:20:00', '04:20:01', 7, 7)
+           INTO loan 
+           VALUES('7', '04:20:00', '04:20:01', 7, 7)
            
-           INTO tblloans 
-           VALUES(8, '05:23:43', '14:32:45', 8, 8)
+           INTO loan 
+           VALUES('8', '05:23:43', '14:32:45', 8, 8)
            
-           INTO tblloans 
-           VALUES(9, '13:34:21', '23:34:54', 9, 9)
+           INTO loan 
+           VALUES('9', '13:34:21', '23:34:54', 9, 9)
            
-           INTO tblloans 
-           VALUES(10, '21:43:34', '15:43:56', 10, 10)
+           INTO loan 
+           VALUES('10', '21:43:34', '15:43:56', 10, 10)
 
 SELECT 1 FROM dual;
+
 ---------------------------INSERT FINE VALUES----------------------------
 
 INSERT ALL
-           INTO tblfine 
-           VALUES(1, '16-04-2022', 30)
+           INTO fine 
+           VALUES('1', '16-04-2022', 30)
+           
+           INTO fine 
+           VALUES('2', '20-03-2022', 45)
+           
+           INTO fine 
+           VALUES('3', '15-01-2020', 1000)
+           
+           INTO fine 
+           VALUES('4', '01-01-1999', 80000)
+           
+           INTO fine 
+           VALUES('5', '15-04-2022', 15)
+           
+           INTO fine 
+           VALUES('6', '25-12-2021', 60)
+           
+           INTO fine 
+           VALUES('7', '01-04-2022', 1000)
            
            INTO tblFine 
-           VALUES(2, '20-03-2022', 45)
+           VALUES('8', '13-11-2019', 2000)
            
            INTO tblfine 
-           VALUES(3, '15-01-2020', 1000)
-           
-           INTO tblFine 
-           VALUES(4, '01-01-1999', 80000)
+           VALUES('9', '21-02-1863',90009)
            
            INTO tblfine 
-           VALUES(5, '15-04-2022', 15)
-           
-           INTO tblFine 
-           VALUES(6, '25-12-2021', 60)
-           
-           INTO tblfine 
-           VALUES(7, '01-04-2022', 1000)
-           
-           INTO tblFine 
-           VALUES(8, '13-11-2019', 2000)
-           
-           INTO tblfine 
-           VALUES(9, '21-02-1863',90009)
-           
-           INTO tblfine 
-           VALUES(10, '13-10-2018',80)
+           VALUES('10', '13-10-2018',80)
            
 SELECT 1 FROM dual;
 
 -----------------------INSERT FINE PAYMENT VALUES-------------------------
 
 INSERT ALL
-           INTO tblfine_payment 
-           VALUES (1,'17-04-2022',30 ,1)
+           INTO fine_payment 
+           VALUES ('1','17-04-2022',30 ,1)
            
-           INTO tblfine_payment 
-           VALUES (2,'21-03-2022',45, 2)
+           INTO fine_payment 
+           VALUES ('2','21-03-2022',45, 2)
            
-           INTO tblfine_payment 
-           VALUES (3,'18-01-2020',1000, 3)
+           INTO fine_payment 
+           VALUES ('3','18-01-2020',1000, 3)
            
-           INTO tblfine_payment 
-           VALUES (4,'11-11-2011',80000, 4)
+           INTO fine_payment 
+           VALUES ('4','11-11-2011',80000, 4)
            
-           into tblFine_payment 
-           VALUES (5,'16-04-2022',15, 5)
+           into fine_payment 
+           VALUES ('5','16-04-2022',15, 5)
            
-           INTO tblfine_payment 
-           VALUES (6,'15-01-2022',60, 6)
+           INTO fine_payment 
+           VALUES ('6','15-01-2022',60, 6)
            
-           INTO tblfine_payment 
-           VALUES (7,'02-04-2022',1000, 7)
+           INTO fine_payment 
+           VALUES ('7','02-04-2022',1000, 7)
            
-           INTO tblfine_payment 
-           VALUES (8,'14-11-2020',2000, 8)
+           INTO fine_payment 
+           VALUES ('8','14-11-2020',2000, 8)
            
-           INTO tblfine_payment 
-           VALUES (9,'21-02-2003',90009, 9)
+           INTO fine_payment 
+           VALUES ('9','21-02-2003',90009, 9)
            
-           INTO tblfine_payment 
-           VALUES (10,'15-10-2018',80, 10)
+           INTO fine_payment 
+           VALUES ('10','15-10-2018',80, 10)
            
 SELECT 1 FROM dual;
 
-
-------------------------INSERT PUBLISHER VALUES--------------------------
-
-INSERT ALL
-           INTO publisher 
-           VALUES ('1', '045689','St.Greens Press')
-           
-           INTO publisher 
-           VALUES ('2', '032321','Houston Books')
-           
-           INTO publisher 
-           VALUES ('3', '077789','Sutton Publishing')
-           
-           INTO publisher 
-           VALUES ('4', '023498','Dr Wall States')
-           
-           INTO publisher 
-           VALUES ('5', '024567','Radley Press')
-           
-           INTO publisher 
-           VALUES ('6', '045689','J.B Elton')
-           
-           INTO publisher 
-           VALUES ('7', '066896','A&F Publishing')
-           
-           INTO publisher 
-           VALUES ('8', '099034','John Publishing')
-           
-           INTO publisher 
-           VALUES ('9', '020576','Ford Books')
-           
-           INTO publisher 
-           VALUES ('10', '068890','Bee Books')
-
-SELECT 1 FROM dual;
 -------------------------INSERT USER VALUES-----------------------------
 
 INSERT ALL
