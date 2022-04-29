@@ -63,9 +63,8 @@ CREATE SCHEMA AUTHORIZATION library_admin
 
     CREATE TABLE publisher (
         id                             NUMBER NOT NULL,
-        book_publisher_id              NUMBER,
         pub_name                       VARCHAR2(255),
-        CONSTRAINT publisher_id_pk
+        CONSTRAINT id_pk
             PRIMARY KEY(id)
 );
 
