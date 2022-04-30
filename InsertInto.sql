@@ -334,105 +334,18 @@ SELECT 1 FROM dual;
 ---------------------------INSERT FINE VALUES----------------------------
 
 INSERT ALL
-           INTO fine 
-           VALUES('1', '16-04-2022', 30)
+           INTO fine (id, fine_date, fine_total, users_id, loan_id)
+           VALUES ('1', TO_DATE('26-JUN-2019', 'DD-MON-YYYY'), '30', '4', '4')
            
-           INTO fine 
-           VALUES('2', '20-03-2022', 45)
-           
-           INTO fine 
-           VALUES('3', '15-01-2020', 1000)
-           
-           INTO fine 
-           VALUES('4', '01-01-1999', 80000)
-           
-           INTO fine 
-           VALUES('5', '15-04-2022', 15)
-           
-           INTO fine 
-           VALUES('6', '25-12-2021', 60)
-           
-           INTO fine 
-           VALUES('7', '01-04-2022', 1000)
-           
-           INTO tblFine 
-           VALUES('8', '13-11-2019', 2000)
-           
-           INTO tblfine 
-           VALUES('9', '21-02-1863',90009)
-           
-           INTO tblfine 
-           VALUES('10', '13-10-2018',80)
+           INTO fine (id, fine_date, fine_total, users_id, loan_id)
+           VALUES ('2', TO_DATE('12-DEC-2021', 'DD-MON-YYYY'), '45', '2', '2')
            
 SELECT 1 FROM dual;
 
 -----------------------INSERT FINE PAYMENT VALUES-------------------------
 
 INSERT ALL
-           INTO fine_payment 
-           VALUES ('1','17-04-2022',30 ,1)
+           INTO fine_payment (id, users_id, pay_date, pay_amount)
+           VALUES ('1', '4', TO_DATE('15-JUL-2022', 'DD-MON-YYYY'), '30')
            
-           INTO fine_payment 
-           VALUES ('2','21-03-2022',45, 2)
-           
-           INTO fine_payment 
-           VALUES ('3','18-01-2020',1000, 3)
-           
-           INTO fine_payment 
-           VALUES ('4','11-11-2011',80000, 4)
-           
-           into fine_payment 
-           VALUES ('5','16-04-2022',15, 5)
-           
-           INTO fine_payment 
-           VALUES ('6','15-01-2022',60, 6)
-           
-           INTO fine_payment 
-           VALUES ('7','02-04-2022',1000, 7)
-           
-           INTO fine_payment 
-           VALUES ('8','14-11-2020',2000, 8)
-           
-           INTO fine_payment 
-           VALUES ('9','21-02-2003',90009, 9)
-           
-           INTO fine_payment 
-           VALUES ('10','15-10-2018',80, 10)
-           
-SELECT 1 FROM dual;
-
-------------------INSERT RESERVATION STATUS VALUES--------------------
-
-INSERT ALL
-
-           INTO reservation_status 
-           VALUES ('1', '222946','Reserved')
-           
-           INTO reservation_status 
-           VALUES ('2', '254789','Available')
-           
-           INTO reservation_status 
-           VALUES ('3', '273554','Reserved')
-           
-           INTO reservation_status 
-           VALUES ('4', '244770','Available')
-           
-           INTO reservation_status 
-           VALUES ('5', '200069','Available')
-           
-           INTO reservation_status
-           VALUES ('6', '201786','Available')
-           
-           INTO reservation_status 
-           VALUES ('7', '265093','Reserved')
-           
-           INTO reservation_status 
-           VALUES ('8', '203340','Available')
-           
-           INTO reservation_status 
-           VALUES ('9', '288885','Reserved')
-           
-           INTO reservation_status 
-           VALUES ('10', '220035','Reserved')
-
 SELECT 1 FROM dual;
