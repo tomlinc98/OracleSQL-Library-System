@@ -317,22 +317,16 @@ SELECT 1 FROM dual;
 
 INSERT ALL
            INTO loan (id, loan_given, loan_return, book_isbn, users_id)
-           VALUES('1', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '9781848250789', '1',)
+           VALUES ('1', TO_DATE('15-NOV-2021', 'DD-MON-YYYY'), TO_DATE('15-DEC-2021', 'DD-MON-YYYY'), '9781848250789', '1')
            
            INTO loan (id, loan_given, loan_return, book_isbn, users_id)
-           VALUES('2', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '9781848250789', '2')
+           VALUES ('2', TO_DATE('11-DEC-2021', 'DD-MON-YYYY'), TO_DATE('11-JAN-2022', 'DD-MON-YYYY'), '9781848250789', '2')
            
            INTO loan (id, loan_given, loan_return, book_isbn, users_id)
-           VALUES('3', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '3')
+           VALUES ('3', TO_DATE('06-JAN-2020', 'DD-MON-YYYY'), TO_DATE('06-FEB-2020', 'DD-MON-YYYY'), '9780099460992', '1')
            
            INTO loan (id, loan_given, loan_return, book_isbn, users_id)
-           VALUES('4', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '4')
-           
-           INTO loan (id, loan_given, loan_return, book_isbn, users_id)
-           VALUES('5', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '5')
-           
-           INTO loan (id, loan_given, loan_return, book_isbn, users_id)
-           VALUES('6', TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), TO_DATE('15-DEC-2019', 'DD-MON-YYYY'), '6')
+           VALUES ('4', TO_DATE('25-MAY-2019', 'DD-MON-YYYY'), TO_DATE('25-JUN-2019', 'DD-MON-YYYY'), '9781594200823', '4')
 
 SELECT 1 FROM dual;
 
