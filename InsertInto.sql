@@ -6,6 +6,7 @@ INSERT ALL
            
            INTO category (id, cat_name)
            VALUES ('2', 'Horror')
+					 
            
            INTO category (id, cat_name)
            VALUES ('3', 'Non-Fiction')
