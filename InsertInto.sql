@@ -1,12 +1,12 @@
 -------------------------INSERT CATAGORY VALUES--------------------------
 
-INSERT ALL
+INSERT ALL 
            INTO category (id, cat_name)
            VALUES ('1', 'Lifestyle')
            
            INTO category (id, cat_name)
            VALUES ('2', 'Horror')
-					 
+			 
            
            INTO category (id, cat_name)
            VALUES ('3', 'Non-Fiction')
