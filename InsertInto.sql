@@ -1,6 +1,6 @@
 -------------------------INSERT CATAGORY VALUES--------------------------
 
-INSERT ALL 
+INSERT ALL
            INTO category (id, cat_name)
            VALUES ('1', 'Lifestyle')
            
