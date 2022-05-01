@@ -33,7 +33,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         location_code                  VARCHAR2(10) NOT NULL,
         publication_date               DATE,
         stock                          NUMBER,
-        catagory                       NUMBER,
+        category                       NUMBER,
         CONSTRAINT book_isbn_pk
             PRIMARY KEY(isbn),
         CONSTRAINT book_category_fk
