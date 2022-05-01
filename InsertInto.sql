@@ -279,6 +279,14 @@ INSERT ALL
            
 SELECT 1 FROM dual;
 
+-------------------------INSERT ADMIN VALUES-----------------------------
+
+INSERT ALL
+           INTO admins (id, first_name, last_name, designation)
+           VALUES ('1', 'Admin', 'Test')
+           
+SELECT 1 FROM dual;
+
 ---------------------INSERT RESERVATION VALUES------------------------
 
 INSERT ALL
