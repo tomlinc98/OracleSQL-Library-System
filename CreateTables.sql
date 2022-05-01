@@ -98,6 +98,15 @@ CREATE SCHEMA AUTHORIZATION library_admin
             PRIMARY KEY(id)
 );
 
+    CREATE TABLE admins (
+        id                             NUMBER NOT NULL,
+        first_name                     VARCHAR2(255) NOT NULL,
+        last_name                      VARCHAR2(255) NOT NULL,
+        designation                    VARCHAR2(255) NOT NULL,
+        CONSTRAINT admin_id_pk 
+            PRIMARY KEY(id)
+);
+
     CREATE TABLE reservation (
         id                             NUMBER NOT NULL,
         res_date                       DATE NOT NULL,
