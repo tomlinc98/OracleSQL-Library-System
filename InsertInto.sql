@@ -106,35 +106,35 @@ SELECT 1 FROM dual;
 --------------------------INSERT AUTHOR VALUES--------------------------
 
 INSERT ALL
-           INTO author (id, first_name, last_name) 
-           VALUES ('1', 'Ruth Cooker', 'Burks')
+           INTO author (id, name)
+           VALUES ('1', 'Ruth Cooker Burks')
            
-           INTO author (id, first_name, last_name) 
-           VALUES ('2', 'Dr Julie', 'Smith')
+           INTO author (id, name)
+           VALUES ('2', 'Dr Julie Smith')
            
-           INTO author (id, first_name, last_name) 
-           VALUES ('3', 'Katherine', 'Boo')
+           INTO author (id, name)
+           VALUES ('3', 'Katherine Boo')
            
-           INTO author (id, first_name, last_name)
-           VALUES ('4', 'Steven D.', 'Levitt')
+           INTO author (id, name)
+           VALUES ('4', 'Steven D. Levitt')
            
-           INTO author (id, first_name, last_name) 
-           VALUES ('5', 'Andrew', 'Solomon')
+           INTO author (id, name)
+           VALUES ('5', 'Andrew Solomon')
            
-           INTO author (id, first_name, last_name) 
-           VALUES ('6', 'Cathy Park', 'Hong')
+           INTO author (id, name)
+           VALUES ('6', 'Cathy Park Hong')
            
-           INTO author (id, first_name, last_name) 
-           VALUES ('7', 'Michael', 'Pollen')
+           INTO author (id, name) 
+           VALUES ('7', 'Michael Pollen')
            
-           INTO author (id, first_name, last_name) 
-           VALUES ('8', 'Eric', 'Schlosser')
+           INTO author (id, name)
+           VALUES ('8', 'Eric Schlosser')
            
-           INTO author (id, first_name, last_name) 
-           VALUES ('9', 'Rachel', 'Carson')
+           INTO author (id, name)
+           VALUES ('9', 'Rachel Carson')
            
-           INTO author (id, first_name, last_name) 
-           VALUES ('10', 'Annie', 'Dillard')
+           INTO author (id, name)
+           VALUES ('10', 'Annie Dillard')
 
 SELECT 1 FROM dual;
 
