@@ -1,3 +1,17 @@
+-------------------------------DASHBOARD HTML-------------------------------
+
+<div class="LMSdash #CONTAINER_CLASS#">
+<div class="circle-tile">
+    <a href="#LINK#"><div class="circle-tile-heading #CLASS1#"><i class="fa #ICON_CLASS#"></i></div></a>
+    <div class="circle-tile-content #CLASS2#">
+        <div class="circle-tile-description text-faded">#TITLE#</div>
+        <div class="circle-tile-number text-faded">#DATA#</div>
+        <a class="circle-tile-footer" href="#LINK#">More Info<i class="fa fa fa-chevron-circle-right"></i></a>
+    </div>
+</div>
+</div>
+
+-------------------------------HOME PAGE CSS-------------------------------
 
 .LMShome{
     float: left;
