@@ -55,8 +55,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
 
     CREATE TABLE author (
         id                             NUMBER NOT NULL,
-        first_name                     VARCHAR2(255),
-        last_name                      VARCHAR2(255),
+        name                           VARCHAR2(255),
         CONSTRAINT author_id_pk
             PRIMARY KEY(id)
 );
