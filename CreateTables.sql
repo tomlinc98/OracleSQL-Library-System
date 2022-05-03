@@ -101,7 +101,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         id                             NUMBER NOT NULL,
         first_name                     VARCHAR2(255) NOT NULL,
         last_name                      VARCHAR2(255) NOT NULL,
-        u_type                           VARCHAR2(30) NOT NULL,
+        u_type                         VARCHAR2(30) NOT NULL,
         username                       VARCHAR2(30) NOT NULL UNIQUE,
         password                       VARCHAR2(20) NOT NULL,
         email                          VARCHAR2(75) NOT NULL UNIQUE,
@@ -112,7 +112,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
             FOREIGN KEY(status_id)
             REFERENCES status_user(status_id),
         CONSTRAINT ck_mail 
-            check(regexp_like(email, '^(\S+)\@(\S+)\.(\S+)$'))
+            CHECK (regexp_like(email, '^(\S+)\@(\S+)\.(\S+)$'))
 );
 
     CREATE TABLE admins (
