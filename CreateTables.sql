@@ -107,7 +107,7 @@ CREATE SCHEMA AUTHORIZATION library_admin
         email                          VARCHAR2(75) NOT NULL UNIQUE,
         status_id                      NUMBER NOT NULL,
         CONSTRAINT users_student_id_pk 
-            PRIMARY KEY(id)
+            PRIMARY KEY(id),
         CONSTRAINT fk_status_user 
             FOREIGN KEY(status_id)
             REFERENCES status_user(status_id),
