@@ -243,6 +243,17 @@ INSERT ALL
 
 SELECT 1 FROM dual;
 
+-------------------------INSERT STATUS USER-----------------------------
+
+INSERT ALL
+           INTO status_user (status, code)
+           VALUES ('Active', 10),
+           
+           INTO status_user (status, code)
+           VALUES ('Disabled', 20),
+          
+SELECT 1 FROM dual;
+
 -------------------------INSERT USER VALUES-----------------------------
 
 INSERT ALL
