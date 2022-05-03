@@ -293,7 +293,7 @@ SELECT 1 FROM dual;
 
 INSERT ALL
            INTO admins (id, first_name, last_name, designation)
-           VALUES ('1', 'Admin', 'Test')
+           VALUES ('1', 'Admin', 'Test', 'Counter Staff')
            
 SELECT 1 FROM dual;
 
