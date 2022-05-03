@@ -87,14 +87,32 @@ CREATE SCHEMA AUTHORIZATION library_admin
         CONSTRAINT book_publisher_publisher_id_fk
             FOREIGN KEY(pub_id)
             REFERENCES publisher(id)
-);        
+);
+
+    CREATE TABLE status_user (
+       status_id                       NUMBER GENERATED AS IDENTITY NOCACHE,
+       status                          VARCHAR2(30) NOT NULL UNIQUE,
+       code                            NUMBER(2) NOT NULL UNIQUE,
+       CONSTRAINT pk_status_user
+       PRIMARY KEY(status_id)
+);
 
     CREATE TABLE users (
         id                             NUMBER NOT NULL,
         first_name                     VARCHAR2(255) NOT NULL,
         last_name                      VARCHAR2(255) NOT NULL,
+        u_type                           VARCHAR2(30) NOT NULL,
+        username                       VARCHAR2(30) NOT NULL UNIQUE,
+        password                       VARCHAR2(20) NOT NULL,
+        email                          VARCHAR2(75) NOT NULL UNIQUE,
+        status_id                      NUMBER NOT NULL,
         CONSTRAINT users_student_id_pk 
             PRIMARY KEY(id)
+        CONSTRAINT fk_status_user 
+            FOREIGN KEY(status_id)
+            REFERENCES status_user(status_id),
+        CONSTRAINT ck_mail 
+            check(regexp_like(email, '^(\S+)\@(\S+)\.(\S+)$'))
 );
 
     CREATE TABLE admins (
