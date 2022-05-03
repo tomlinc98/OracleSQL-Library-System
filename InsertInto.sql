@@ -257,35 +257,35 @@ SELECT 1 FROM dual;
 -------------------------INSERT USER VALUES-----------------------------
 
 INSERT ALL
-           INTO users (id, first_name, last_name)
-           VALUES ('1', 'Brett', 'Simmons')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('1', 'Brett', 'Simmons', 'Student', 'bsimmons1', '4!zmCxP^fwzs8n', 'bsimmons1@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('2', 'Selena', 'Johnson')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('2', 'Selena', 'Johnson', 'Student', 'selenajohnson', 'y*z%n3GX!7uZa@', 'selenajohnson@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('3', 'Gary', 'Keaton')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('3', 'Gary', 'Keaton', 'Student', 'gaz-keaton', 's$nqEdNZ6%nzen', 'gaz-keaton@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('4', 'Bobby', 'Vermon')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('4', 'Bobby', 'Vermon', 'Student', 'bvermon32', 'AQDxX7FP9Yb9$H', 'bvermon32@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('5', 'John', 'Black')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('5', 'John', 'Black', 'Student', 'johnny_black', '#!4JvAx#^hpYa9', 'johnny_black@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('6', 'Megan', 'Frasher')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('6', 'Megan', 'Frasher' , 'Student', 'meg1frasher', 'S2UtW!mc%shEh$', 'meg1frasher@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('7', 'Samantha', 'Ruth')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('7', 'Samantha', 'Ruth', 'Student', 'sam4ruth', 'TVxNo4Rym2eWv^', 'sam4ruth@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('8', 'Tory', 'Diaz')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('8', 'Tory', 'Diaz', 'Student', 't-diaz', 'HSPE*LZWk9NmHf', 't-diaz@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('9', 'Jason', 'Wayne')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('9', 'Jason', 'Wayne', 'Student', 'jason_wayne', 'TP6ukL83PiD3X&', 'jason_wayne@leinster.edu', 2)
            
-           INTO users (id, first_name, last_name)
-           VALUES ('10', 'Kira', 'Crawford')
+           INTO users (id, first_name, last_name, u_type, username, password, email, status_id)
+           VALUES ('10', 'Kira', 'Crawford', 'Faculty', 'KiraCrawford', 'GZ442njUW^f5iy', 'KiraCrawford@leinster.edu', 2)
            
 SELECT 1 FROM dual;
 
