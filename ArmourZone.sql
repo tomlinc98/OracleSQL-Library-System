@@ -102,71 +102,62 @@ CREATE SCHEMA AUTHORIZATION az_admin
 );
 
     CREATE TABLE supplier_product (
-        id                             NUMBER NOT NULL,
-        first_name                     VARCHAR2(255) NOT NULL,
-        last_name                      VARCHAR2(255) NOT NULL,
-        designation                    VARCHAR2(255) NOT NULL,
-        CONSTRAINT admin_id_pk 
-            PRIMARY KEY(id)
+        supplier_id                    NUMBER NOT NULL,
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT supplier_id_fk 
+            FOREIGN KEY(supplier_id)
+            REFERENCES supplier(id),
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
 );
 
-    CREATE TABLE reservation (
+    CREATE TABLE discount (
         id                             NUMBER NOT NULL,
-        res_date                       DATE NOT NULL,
-        users_id                       NUMBER,
-        book_isbn                      NUMBER,
-        CONSTRAINT reservation_id_pk 
+        CONSTRAINT discount_id_pk 
             PRIMARY KEY(id),
-        CONSTRAINT reservation_users_id_fk
-            FOREIGN KEY(users_id)
-            REFERENCES users(id) ON DELETE CASCADE,
-        CONSTRAINT reservation_book_isbn_fk
-            FOREIGN KEY(book_isbn)
-            REFERENCES book(isbn) ON DELETE CASCADE
 );
 
-    CREATE TABLE loan (
-        id                             NUMBER NOT NULL,
-        loan_given                     DATE NOT NULL,
-        loan_return                    DATE NOT NULL,
-        book_isbn                      NUMBER,
-        users_id                       NUMBER,
-        CONSTRAINT loan_id_pk 
-            PRIMARY KEY(id),
-        CONSTRAINT loan_user_id_fk
-            FOREIGN KEY(users_id)
-            REFERENCES users(id) ON DELETE CASCADE,
-        CONSTRAINT loan_book_isbn_fk
-            FOREIGN KEY(book_isbn)
-            REFERENCES book(isbn) ON DELETE CASCADE
+    CREATE TABLE handled_weapon (
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
 );
 
-    CREATE TABLE fine (
-        id                             NUMBER NOT NULL,
-        fine_date                      DATE NOT NULL,
-        fine_total                     NUMBER,
-        users_id                       NUMBER,
-        loan_id                        NUMBER,
-        CONSTRAINT fine_id_pk
-            PRIMARY KEY(id),
-        CONSTRAINT fine_users_id_fk
-            FOREIGN KEY(users_id)
-            REFERENCES users(id) ON DELETE CASCADE,
-        CONSTRAINT fine_loan_id_fk
-            FOREIGN KEY(loan_id)
-            REFERENCES loan(id) ON DELETE CASCADE
+    CREATE TABLE sword (
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
 );
 
-    CREATE TABLE fine_payment (
-        id                             NUMBER NOT NULL,
-        users_id                       NUMBER,
-        pay_date                       DATE,
-        pay_amount                     NUMBER,
-        CONSTRAINT fine_payment_id_pk 
-            PRIMARY KEY(id),
-        CONSTRAINT fine_payment_users_id_fk
-            FOREIGN KEY(users_id)  
-            REFERENCES users(id) ON DELETE CASCADE
+    CREATE TABLE firearm (
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
+);
+
+    CREATE TABLE accessory (
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
+);
+
+    CREATE TABLE flintlock (
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
+);
+
+    CREATE TABLE matchlock (
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
 );
 
 -------------------------------ALTER ENUM-------------------------------
