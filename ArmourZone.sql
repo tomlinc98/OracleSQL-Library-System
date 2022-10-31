@@ -1,121 +1,107 @@
 -------------------------------DROP TABLES-------------------------------
 
-DROP TABLE book;
-DROP TABLE category;
-DROP TABLE copy;
-DROP TABLE author;
-DROP TABLE publisher;
-DROP TABLE book_author;
-DROP TABLE book_publisher;
-DROP TABLE users;
-DROP TABLE reservation;
-DROP TABLE reservation_status;
-DROP TABLE loan;
-DROP TABLE fine;
-DROP TABLE fine_payment;
+DROP TABLE customer, purchase_order, product, payment, delivery, supplier, order_product, armour, clothing, supplier_product, weapon, discount, handled_weapon, sword, firearm, accessory, flintlock, matchlock
 
 ------------------------------CREATE SCHEMA------------------------------
 
-CREATE SCHEMA AUTHORIZATION library_admin
+CREATE SCHEMA AUTHORIZATION az_admin
 
 ------------------------------CREATE TABLES------------------------------
     
-    CREATE TABLE category (
+    CREATE TABLE customer (
         id                             NUMBER NOT NULL,
-        cat_name                       VARCHAR2(30),
-        CONSTRAINT category_id_pk 
-            PRIMARY KEY(id)
-);
-
-    CREATE TABLE book (
-        isbn                           NUMBER NOT NULL,
-        title                          VARCHAR2(255) NOT NULL,
-        location_code                  VARCHAR2(10) NOT NULL,
-        publication_date               DATE,
-        stock                          NUMBER,
-        category_id                    NUMBER,
-        CONSTRAINT book_isbn_pk
-            PRIMARY KEY(isbn),
-        CONSTRAINT book_category_id_fk
-            FOREIGN KEY(category_id)
-            REFERENCES category(id)
-);
-
-    CREATE TABLE copy (
-        id                             NUMBER NOT NULL,
-        book_isbn                      NUMBER,
-        date_aquired                   DATE NOT NULL,
-        date_removed                   DATE,
-        CONSTRAINT copy_id_pk 
-            PRIMARY KEY(id),
-        CONSTRAINT copy_book_isbn_fk 
-            FOREIGN KEY(book_isbn) 
-            REFERENCES book(isbn) ON DELETE CASCADE
-);
-
-    CREATE TABLE author (
-        id                             NUMBER NOT NULL,
-        name                           VARCHAR2(255),
-        CONSTRAINT author_id_pk
-            PRIMARY KEY(id)
-);
-
-    CREATE TABLE publisher (
-        id                             NUMBER NOT NULL,
-        pub_name                       VARCHAR2(255),
-        CONSTRAINT id_pk
-            PRIMARY KEY(id)
-);
-
-    CREATE TABLE book_author (
-        book_isbn                      NUMBER,
-        author_id                      NUMBER,
-        CONSTRAINT book_author_book_isbn_fk
-            FOREIGN KEY(book_isbn)
-            REFERENCES book(isbn),
-        CONSTRAINT book_author_author_id_fk
-            FOREIGN KEY(author_id)
-            REFERENCES author(id)
-);
-
-    CREATE TABLE book_publisher (
-        book_isbn                      NUMBER,
-        pub_id                         NUMBER,
-        CONSTRAINT book_publisher_book_isbn_fk
-            FOREIGN KEY(book_isbn)
-            REFERENCES book(isbn),
-        CONSTRAINT book_publisher_publisher_id_fk
-            FOREIGN KEY(pub_id)
-            REFERENCES publisher(id)
-);
-
-    CREATE TABLE status_user (
-       status_id                       NUMBER GENERATED AS IDENTITY NOCACHE,
-       status                          VARCHAR2(30) NOT NULL UNIQUE,
-       code                            NUMBER(2) NOT NULL UNIQUE,
-       CONSTRAINT pk_status_user
-       PRIMARY KEY(status_id)
-);
-
-    CREATE TABLE users (
-        id                             NUMBER NOT NULL,
-        first_name                     VARCHAR2(255) NOT NULL,
-        last_name                      VARCHAR2(255) NOT NULL,
-        u_type                         VARCHAR2(30) NOT NULL,
+        first_name                     VARCHAR2(30),
+        last_name                      VARCHAR2(30),
         username                       VARCHAR2(30) NOT NULL UNIQUE,
         password                       VARCHAR2(20) NOT NULL,
         email                          VARCHAR2(75) NOT NULL UNIQUE,
-        status_id                      NUMBER NOT NULL,
-        CONSTRAINT users_student_id_pk 
-            PRIMARY KEY(id),
-        CONSTRAINT fk_status_user 
-            FOREIGN KEY(status_id)
-            REFERENCES status_user(status_id),
-        CONSTRAINT ck_mail 
-            CHECK (regexp_like(email, '^(\S+)\@(\S+)\.(\S+)$'))
+        CONSTRAINT customer_id_pk 
+            PRIMARY KEY(id)
 );
 
-    CREATE TABLE admins (
+    CREATE TABLE purchase_order (
+        id                             NUMBER NOT NULL,
+        customer_id                    NUMBER NOT NULL,
+        order_date                     DATE,
+
+        order_products
+        
+        CONSTRAINT purchase_order_id_pk
+            PRIMARY KEY(id),
+        CONSTRAINT purchase_order_customer_id_fk
+            FOREIGN KEY(customer_id)
+            REFERENCES customer(id)
+);
+
+    CREATE TABLE product (
+        id                             NUMBER NOT NULL,
+        name                           VARCHAR2(255) NOT NULL,
+        stock_code                     NUMBER NOT NULL,
+        stock_amount                   NUMBER NOT NULL,
+        CONSTRAINT product_id_pk 
+            PRIMARY KEY(id),
+        
+        ###########
+        CONSTRAINT supplier_id_fk 
+            FOREIGN KEY(supplier_id) 
+            REFERENCES book(isbn) ON DELETE CASCADE
+        ###########
+);
+
+    CREATE TABLE payment (
+        id                             NUMBER NOT NULL,
+        amount                         NUMBER NOT NULL,
+        CONSTRAINT payment_id_pk
+            PRIMARY KEY(id)
+);
+
+    CREATE TABLE delivery (
+        id                             NUMBER NOT NULL,
+        CONSTRAINT delivery_id_pk
+            PRIMARY KEY(id)
+);
+
+    CREATE TABLE supplier (
+        id                             NUMBER NOT NULL,
+        name                           VARCHAR2(255),
+        address                        VARCHAR2(255),
+        CONSTRAINT supplier_id_pk
+            PRIMARY KEY(id)
+);
+
+    CREATE TABLE order_product (
+        purchase_order_id               NUMBER NOT NULL,
+        product_id                      NUMBER NOT NULL,
+        CONSTRAINT order_id_fk
+            FOREIGN KEY(purchase_order_id)
+            REFERENCES purchase_order(id),
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
+);
+
+    CREATE TABLE armour (
+       product_id                       NUMBER NOT NULL,
+       CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
+);
+
+    CREATE TABLE clothing (
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
+);
+
+    CREATE TABLE weapon (
+        product_id                     NUMBER NOT NULL,
+        CONSTRAINT product_id_fk
+            FOREIGN KEY(product_id)
+            REFERENCES product(id)
+);
+
+    CREATE TABLE supplier_product (
         id                             NUMBER NOT NULL,
         first_name                     VARCHAR2(255) NOT NULL,
         last_name                      VARCHAR2(255) NOT NULL,
@@ -185,8 +171,20 @@ CREATE SCHEMA AUTHORIZATION library_admin
 
 -------------------------------ALTER ENUM-------------------------------
 
-ALTER TABLE reservation 
-    ADD (res_status VARCHAR2(6),
-    CONSTRAINT status_type
-    CHECK (res_status in('AVAILABLE','RESERVED'))
+ALTER TABLE payment 
+    ADD (payment_status VARCHAR2(6),
+    CONSTRAINT payment_status_enum
+    CHECK (payment_status in('UNPAID','PAID'))
+);
+
+ALTER TABLE payment 
+    ADD (payment_type VARCHAR2(6),
+    CONSTRAINT payment_type_enum
+    CHECK (payment_type in('CARD','CASH'))
+);
+
+ALTER TABLE delivery 
+    ADD (delivery_status VARCHAR2(10),
+    CONSTRAINT delivery_status_enum
+    CHECK (delivery_status in('PROCESSING','SHIPPED','DELIVERED'))
 );
