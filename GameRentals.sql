@@ -178,122 +178,122 @@ SELECT 1 FROM dual;
 
 INSERT ALL
            INTO catalogue (cat_no, genre_id, title, synopsis, age_rating, developer)
-           VALUES ('1', '1', 'Death Stranding', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time. With spectral creatures plaguing the landscape, and humanity on the verge of a mass extinction, it’s up to Sam to journey across the ravaged continent and save mankind from impending annihilation.', '18', 'Kojima Productions')
+           VALUES ('1', '1', 'Death Stranding', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time.', '18', 'Kojima Productions')
            
            INTO catalogue (cat_no, genre_id, title, synopsis, age_rating, developer)
-           VALUES ('2', '2', 'LEGO Star Wars: The Skywalker Saga', 'Friends and family can dive right into their favorite saga film and play through memorable Star Wars moments, reimagined with LEGO fun and humor. Players can start at the beginning with Star Wars™: The Phantom Menace, begin the original trilogy with Star Wars™: A New Hope, or begin the sequel trilogy with Star Wars™: The Force Awakens . From the desert of Geonosis, to the swamps of Dagobah, to the snowfields of Starkiller Base – players will have the power to revisit any planet, at any time, in any order they wish. The entire galaxy is available to discover and play in.', '7', 'Warner Bros. Interactive Entertainment')	 
+           VALUES ('2', '2', 'LEGO Star Wars: The Skywalker Saga', 'Friends and family can dive right into their favorite saga film and play through memorable Star Wars moments, reimagined with LEGO fun and humor.', '7', 'Warner Bros. Interactive Entertainment')	 
            
            INTO catalogue (cat_no, genre_id, title, synopsis, age_rating, developer)
-           VALUES ('3', '3', 'Fifa 22', ' HYPERMOTION GAMEPLAY TECHNOLOGY: Brand new for EA SPORTS FIFA and on next generation consoles, HyperMotion combines two technologies for the first time ever, revolutionising football gameplay. GOALKEEPER REWRITE: A brand new goalkeeper system brings a new level of intelligence to the last line of defence, unlocking more reliable shot-stopping and smarter decision-making between the posts. In FIFA 22, goalkeeper positioning personality replicates the different styles of keepers throughout the game - to represent the lightning-fast reflexes of world-class shot stoppers. TRUE BALL PHYSICS: Real-world data imported into FIFA 22 takes the game’s ball physics to a new level of realism. Tuned parameters including speed, swerve, air drag, air resistance, ground friction, and rolling friction mean every touch, trap, shot, volley, pass, and dribble will look, move, and fly like the real thing', '3', 'Electronic Arts')
+           VALUES ('3', '3', 'Fifa 22', ' HYPERMOTION GAMEPLAY TECHNOLOGY: Brand new for EA SPORTS FIFA and on next generation consoles, HyperMotion combines two technologies for the first time ever, revolutionising football gameplay.', '3', 'Electronic Arts')
            
            INTO catalogue (cat_no, genre_id, title, synopsis, age_rating, developer)
-           VALUES ('4', '4', 'Call of Duty: Black Ops', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', '18', Treyarch)
+           VALUES ('4', '4', 'Call of Duty: Black Ops', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', '18', 'Treyarch')
 
 SELECT 1 FROM dual;
 
 INSERT ALL
            INTO pc_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('1', 'PC', '1', '30/03/22', 'https://imgur.com/t/deathstranding/pGnbgdU')
+           VALUES ('1', 'PC', '1', '30-MAR-22', 'https://imgur.com/t/deathstranding/pGnbgdU')
            
            INTO pc_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('2', 'PC', '1', '05/04/22', 'https://imgur.com/gallery/4RNZCHN')	 
+           VALUES ('2', 'PC', '1', '05-APR-22', 'https://imgur.com/gallery/4RNZCHN')	 
            
            INTO pc_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('3', 'PC', '1', '30/09/21', 'https://imgur.com/gallery/9RnVeDH' )
+           VALUES ('3', 'PC', '1', '30-SEP-21', 'https://imgur.com/gallery/9RnVeDH' )
            
            INTO pc_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('4', 'PC', '1', '09/11/10', 'https://imgur.com/gallery/RX4C3cd' )
+           VALUES ('4', 'PC', '1', '09-NOV-10', 'https://imgur.com/gallery/RX4C3cd' )
 
 SELECT 1 FROM dual;
 
 INSERT ALL      
            INTO wii_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('4', 'Wii', '1', '09/11/10', 'https://i0.wp.com/v1cdn.destructoid.com/188051_BlackOpsWii-620x.jpg?resize=620%2C460&ssl=1' )
+           VALUES ('4', 'Wii', '1', '09-NOV-10', 'https://i0.wp.com/v1cdn.destructoid.com/188051_BlackOpsWii-620x.jpg?resize=620%2C460&ssl=1' )
 
 SELECT 1 FROM dual;
 
 INSERT ALL
            INTO ps_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('1', 'PlayStation', '1', '08/11/19', 'https://imgur.com/t/deathstranding/pGnbgdU')
+           VALUES ('1', 'PlayStation', '1', '08-NOV-19', 'https://imgur.com/t/deathstranding/pGnbgdU')
            
            INTO ps_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('2', 'PlayStation', '1', '05/04/22', 'https://imgur.com/gallery/4RNZCHN')	 
+           VALUES ('2', 'PlayStation', '1', '05-APR-22', 'https://imgur.com/gallery/4RNZCHN')	 
            
            INTO ps_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('3', 'PlayStation', '1', '30/09/21', 'https://imgur.com/gallery/9RnVeDH' )
+           VALUES ('3', 'PlayStation', '1', '30-SEP-21', 'https://imgur.com/gallery/9RnVeDH' )
            
            INTO ps_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('4', 'PlayStation', '1', '09/11/10', 'https://imgur.com/gallery/RX4C3cd' )
+           VALUES ('4', 'PlayStation', '1', '09-NOV-10', 'https://imgur.com/gallery/RX4C3cd' )
 
 SELECT 1 FROM dual;
 
 INSERT ALL
            INTO xbox_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('2', 'Xbox', '1', '05/04/22', 'https://imgur.com/gallery/4RNZCHN')	 
+           VALUES ('2', 'Xbox', '1', '05-APR-22', 'https://imgur.com/gallery/4RNZCHN')	 
            
            INTO xbox_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('3', 'Xbox', '1', '30/09/21', 'https://imgur.com/gallery/9RnVeDH' )
+           VALUES ('3', 'Xbox', '1', '30-SEP-21', 'https://imgur.com/gallery/9RnVeDH' )
            
            INTO xbox_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('4', 'Xbox', '1', '09/11/10', 'https://imgur.com/gallery/RX4C3cd' )
+           VALUES ('4', 'Xbox', '1', '09-NOV-10', 'https://imgur.com/gallery/RX4C3cd' )
 
 SELECT 1 FROM dual;
 
 INSERT ALL
            INTO stock (stock_no, cat_no, date_aquired, date_removed)
-           VALUES ('1', '1', '05/04/22', '')
+           VALUES ('1', '1', '05-APR-22', '')
            
            INTO stock (stock_no, cat_no, date_aquired, date_removed)
-           VALUES ('2', '2', '25/10/21', '')
+           VALUES ('2', '2', '25-OCT-21', '')
            
            INTO stock (stock_no, cat_no, date_aquired, date_removed)
-           VALUES ('3', '2', '25/10/21', '')
+           VALUES ('3', '2', '25-OCT-21', '')
            
            INTO stock (stock_no, cat_no, date_aquired, date_removed)
-           VALUES ('4', '4', '09/12/10', '')
+           VALUES ('4', '4', '09-DEC-10', '')
 
 SELECT 1 FROM dual;
 
 INSERT ALL
            INTO supplier (supplier_id, stock_no, supplier_name)
-           VALUES ('1', '1', 'games.com', '')
+           VALUES ('1', '1', 'games.com')
            
            INTO supplier (supplier_id, stock_no, supplier_name)
-           VALUES ('1', '2', 'gameswarehouse', '')
+           VALUES ('2', '2', 'gameswarehouse')
            
            INTO supplier (supplier_id, stock_no, supplier_name)
-           VALUES ('1', '3', 'supplier1', '')
+           VALUES ('3', '3', 'supplier1')
            
            INTO supplier (supplier_id, stock_no, supplier_name)
-           VALUES ('1', '4', 'games.com', '')
+           VALUES ('4', '4', 'games.com')
 
 SELECT 1 FROM dual;
 
 INSERT ALL
            INTO member (member_id, first_name, last_name, email, address, postcode, city, active, create_date, last_update)
-           VALUES ('1', 'Micheal', 'Bowhill', 'mb0whill@gmail.com', '24 address lane', 'AD1 RE5', 'Luton', '10/12/21', '')
+           VALUES ('1', 'Micheal', 'Bowhill', 'mb0whill@gmail.com', '24 address lane', 'AD1 RE5', 'Luton', '1', '10-DEC-21', '10-DEC-21')
            
            INTO member (member_id, first_name, last_name, email, address, postcode, city, active, create_date, last_update)
-           VALUES ('2', 'Megan', 'Fraser', 'meg1fraser@gmail.com', '3 place hill', 'PL4 CEH', 'Bradford', '05/02/22', '01/04/22')
+           VALUES ('2', 'Megan', 'Fraser', 'meg1fraser@gmail.com', '3 place hill', 'PL4 CEH', 'Bradford', '1', '05-FEB-22', '01-MAR-22')
            
            INTO member (member_id, first_name, last_name, email, address, postcode, city, active, create_date, last_update)
-           VALUES ('3', 'Kira', 'Crawford', 'KiraCrawford@gmail.com', '12 somewhere road', 'SM44 WHR', 'Rugby', '22/04/22', '')
+           VALUES ('3', 'Kira', 'Crawford', 'KiraCrawford@gmail.com', '12 somewhere road', 'SM44 WHR', 'Rugby', '1', '22-APR-22', '22-APR-22')
 
 SELECT 1 FROM dual;
 
 
 INSERT ALL
            INTO reservation (res_id, stock_no, member_id, res_date)
-           VALUES ('1', '3', '1', '08/12/22')
+           VALUES ('1', '3', '1', '08-DEC-22')
 
 SELECT 1 FROM dual;
 
 INSERT ALL
            INTO rental (rental_id, stock_no, member_id, rental_date, return_date)
-           VALUES ('1', '1', '2', '05/12/22', '19/12/22')
+           VALUES ('1', '1', '2', '05-DEC-22', '19-DEC-22')
            
            INTO rental (rental_id, stock_no, member_id, rental_date, return_date)
-           VALUES ('2', '3', '3', '16/11/22', '30/11/22')
+           VALUES ('2', '3', '3', '16-NOV-22', '30-DEC-22')
 
 SELECT 1 FROM dual;
 
@@ -308,7 +308,6 @@ SELECT 1 FROM dual;
 
 INSERT ALL
            INTO fine (rental_id, fine_date, fine_debit, fine_credit)
-           VALUES ('3', '01/12/22', '6', '0')
+           VALUES ('2', '01-DEC-22', '6', '0')
 
 SELECT 1 FROM dual;
-
