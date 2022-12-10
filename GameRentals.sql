@@ -142,7 +142,7 @@
 );
 
     CREATE TABLE daily_rates (
-        rate_type                      NUMBER NOT NULL,
+        rate_type                      VARCHAR2(50),
         rate_price                     NUMBER
 );
 
