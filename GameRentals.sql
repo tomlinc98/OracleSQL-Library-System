@@ -86,11 +86,22 @@
 
   CREATE TABLE supplier (
       supplier_id                    NUMBER NOT NULL,
-      stock_no                       NUMBER NOT NULL,
       supplier_name                  VARCHAR2(255),
 
       CONSTRAINT supplier_id_pk
           PRIMARY KEY(supplier_id)
+);
+
+  CREATE TABLE supplier_item (
+      supplier_id                    NUMBER NOT NULL,
+      stock_no                       NUMBER NOT NULL,
+
+      CONSTRAINT supplier_id_fk
+          FOREIGN KEY(supplier_id)
+          REFERENCES supplier(supplier_id),
+      CONSTRAINT supi_stock_no_fk
+          FOREIGN KEY(stock_no)
+          REFERENCES stock(stock_no)
 );
 
     CREATE TABLE member (
