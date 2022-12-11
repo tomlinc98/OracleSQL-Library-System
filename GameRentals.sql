@@ -266,17 +266,26 @@ INSERT ALL
 SELECT 1 FROM dual;
 
 INSERT ALL
-           INTO supplier (supplier_id, stock_no, supplier_name)
-           VALUES ('1', '1', 'games.com')
+           INTO supplier (supplier_id, supplier_name)
+           VALUES ('1', 'games.com')
            
-           INTO supplier (supplier_id, stock_no, supplier_name)
-           VALUES ('2', '2', 'gameswarehouse')
+           INTO supplier (supplier_id, supplier_name)
+           VALUES ('2', 'gameswarehouse')
            
-           INTO supplier (supplier_id, stock_no, supplier_name)
-           VALUES ('3', '3', 'supplier1')
+           INTO supplier (supplier_id, supplier_name)
+           VALUES ('3', 'supplier1')
+
+SELECT 1 FROM dual;
+
+INSERT ALL
+           INTO supplier_item (supplier_id, stock_no)
+           VALUES ('1', '1')
            
-           INTO supplier (supplier_id, stock_no, supplier_name)
-           VALUES ('4', '4', 'games.com')
+           INTO supplier_item (supplier_id, stock_no)
+           VALUES ('2', '2')
+           
+           INTO supplier_item (supplier_id, stock_no)
+           VALUES ('3', '3')
 
 SELECT 1 FROM dual;
 
