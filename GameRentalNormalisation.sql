@@ -148,7 +148,7 @@
         catalogue_id                   NUMBER NOT NULL,
         member_id                      NUMBER NOT NULL,
         date_requested                 DATE NOT NULL,
-        date_issued                    DATE NOT NULL,
+        date_issued                    DATE NULL,
 
         CONSTRAINT res_catalogue_id_fk
             FOREIGN KEY(catalogue_id)
@@ -194,17 +194,17 @@ INSERT ALL
            INTO daily_rates (rate_id, rate_type, rate_price)
            VALUES ('1', 'Latest Games', '1')
            
-           INTO daily_rates (rate_type, rate_price)
+           INTO daily_rates (rate_id, rate_type, rate_price)
            VALUES ('2', 'Old Games', '0.3')
 
 SELECT 1 FROM dual;
 
 INSERT ALL
            INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
-           VALUES ('1', '1', '1', 'Death Stranding', '1', '18', '30-MAR-22', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time.', 'https://imgur.com/t/deathstranding/pGnbgdU', 'https://www.metacritic.com/game/playstation-4/death-stranding' '7.4', 'Kojima Productions', '2')
+           VALUES ('1', '1', '1', 'Death Stranding', '1', '18', '30-MAR-22', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time.', 'https://imgur.com/t/deathstranding/pGnbgdU', 'https://www.metacritic.com/game/playstation-4/death-stranding', '7.4', 'Kojima Productions', '2')
  
            INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
-           VALUES ('2', '1', '2', 'Death Stranding', '1', '18', '08-NOV-19', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time.', 'https://imgur.com/t/deathstranding/pGnbgdU', 'https://www.metacritic.com/game/playstation-4/death-stranding' '7.4', 'Kojima Productions', '2')
+           VALUES ('2', '1', '2', 'Death Stranding', '1', '18', '08-NOV-19', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time.', 'https://imgur.com/t/deathstranding/pGnbgdU', 'https://www.metacritic.com/game/playstation-4/death-stranding', '7.4', 'Kojima Productions', '2')
  
            INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
            VALUES ('3', '2', '1', 'LEGO Star Wars: The Skywalker Saga', '1', '7', '05-APR-22', 'Friends and family can dive right into their favorite saga film and play through memorable Star Wars moments, reimagined with LEGO fun and humor.', 'https://imgur.com/gallery/4RNZCHN', 'https://www.metacritic.com/game/playstation-5/lego-star-wars-the-skywalker-saga', '8.1', 'Warner Bros. Interactive Entertainment', '2')	 
@@ -225,17 +225,18 @@ INSERT ALL
            VALUES ('8', '3', '3', 'Fifa 22', '1', '3', '30-SEP-21', 'HYPERMOTION GAMEPLAY TECHNOLOGY: Brand new for EA SPORTS FIFA and on next generation consoles, HyperMotion combines two technologies for the first time ever, revolutionising football gameplay.','https://imgur.com/gallery/9RnVeDH','https://www.metacritic.com/game/xbox-one/fifa-22', '2.0', 'Electronic Arts', '2')
            
            INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
-           VALUES ('9', '4', '1', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/pc/call-of-duty-black-ops' '5.8', 'Treyarch', '2')
+           VALUES ('9', '4', '1', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/pc/call-of-duty-black-ops', '5.8', 'Treyarch', '2')
 
            INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
-           VALUES ('10', '4', '2', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/playstation-3/call-of-duty-black-ops' '6.9', 'Treyarch', '2')
+           VALUES ('10', '4', '2', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/playstation-3/call-of-duty-black-ops', '6.9', 'Treyarch', '2')
 
            INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
-           VALUES ('11', '4', '3', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/xbox-360/call-of-duty-black-ops' '6.7', 'Treyarch', '2')
+           VALUES ('11', '4', '3', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/xbox-360/call-of-duty-black-ops', '6.7', 'Treyarch', '2')
 
            INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
-           VALUES ('12', '4', '4', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://i0.wp.com/v1cdn.destructoid.com/188051_BlackOpsWii-620x.jpg?resize=620%2C460&ssl=1', 'https://www.metacritic.com/game/wii/call-of-duty-black-ops' '6.1', 'Treyarch', '2')
+           VALUES ('12', '4', '4', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://i0.wp.com/v1cdn.destructoid.com/188051_BlackOpsWii-620x.jpg?resize=620%2C460&ssl=1', 'https://www.metacritic.com/game/wii/call-of-duty-black-ops', '6.1', 'Treyarch', '2')
 
+SELECT 1 FROM dual;
 
 INSERT ALL
            INTO stock (stock_id, catalogue_id, copies_held, notes)
@@ -308,13 +309,13 @@ SELECT 1 FROM dual;
 
 INSERT ALL
            INTO members (member_id, first_name, last_name, email, date_of_birth, address_1, address_2, city, postcode, tel_no, max_no_rentals, create_date, last_update, active)
-           VALUES ('1', 'Micheal', 'Bowhill', 'mb0whill@gmail.com', '17-MAY-1979', '24 address lane', '', 'Luton', 'AD1 RE5', '07734 734734', '4', '10-DEC-21', '10-DEC-21', '1')
+           VALUES ('1', 'Micheal', 'Bowhill', 'mb0whill@gmail.com', '17-MAY-1979', '24 address lane', '', 'Luton', 'AD1RE5', '07734734734', '4', '10-DEC-21', '10-DEC-21', '1')
            
            INTO members (member_id, first_name, last_name, email, date_of_birth, address_1, address_2, city, postcode, tel_no, max_no_rentals, create_date, last_update, active)
-           VALUES ('2', 'Megan', 'Fraser', 'meg1fraser@gmail.com', '10-SEP-2001', '3 place hill', '', 'Bradford', 'PL4 CEH', '07234 234234', '4', '05-FEB-22', '01-MAR-22', '1')
+           VALUES ('2', 'Megan', 'Fraser', 'meg1fraser@gmail.com', '10-SEP-2001', '3 place hill', '', 'Bradford', 'PL4CEH', '07234234234', '4', '05-FEB-22', '01-MAR-22', '1')
            
            INTO members (member_id, first_name, last_name, email, date_of_birth, address_1, address_2, city, postcode, tel_no, max_no_rentals, create_date, last_update, active)
-           VALUES ('3', 'Kira', 'Crawford', 'KiraCrawford@gmail.com', '30-JUN-1984', '12 somewhere road', '', 'Rugby', 'SM44 WHR', '07991 991991', '4', '22-APR-22', '22-APR-22', '1')
+           VALUES ('3', 'Kira', 'Crawford', 'KiraCrawford@gmail.com', '30-JUN-1984', '12 somewhere road', '', 'Rugby', 'SM44WHR', '07991991991', '4', '22-APR-22', '22-APR-22', '1')
 
 SELECT 1 FROM dual;
 
