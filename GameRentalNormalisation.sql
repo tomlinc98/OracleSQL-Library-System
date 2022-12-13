@@ -1,87 +1,66 @@
 ------------------------------CREATE TABLES------------------------------
     CREATE TABLE genre (
-        gen_id                         NUMBER NOT NULL,
+        genre_id                       NUMBER NOT NULL,
         genre                          VARCHAR2(50),
 
-        CONSTRAINT gen_id_pk
-            PRIMARY KEY(gen_id)
+        CONSTRAINT genre_id_pk
+            PRIMARY KEY(genre_id)
+);
+
+    CREATE TABLE platform (
+        platform_id                    NUMBER NOT NULL,
+        platform                       VARCHAR2(50),
+
+        CONSTRAINT platform_id_pk
+            PRIMARY KEY(platform_id)
+);
+
+    CREATE TABLE daily_rates (
+        rate_id                        NUMBER NOT NULL,
+        rate_type                      VARCHAR2(50),
+        rate_price                     NUMBER,
+
+        CONSTRAINT rate_id_pk
+            PRIMARY KEY(rate_id)
 );
     
     CREATE TABLE catalogue (
-        cat_no                         NUMBER NOT NULL,
+        catalogue_id                   NUMBER NOT NULL,
         genre_id                       NUMBER NOT NULL,
+        platform_id                    NUMBER NOT NULL,
         title                          VARCHAR2(50),
+        no_disks                       NUMBER NOT NULL,
+        age_rating                     NUMBER DEFAULT 3,
+        release_date                   DATE,
         synopsis                       VARCHAR2(255),
-        age_rating                     NUMBER,
+        review                         VARCHAR2(255),
+        rating                         NUMBER,
         developer                      VARCHAR2(50),
-        
-        CONSTRAINT cat_no_pk 
-            PRIMARY KEY(cat_no),
-        CONSTRAINT genre_fk
+        rate_id                        NUMBER NOT NULL,
+        CONSTRAINT catalogue_id_pk 
+            PRIMARY KEY(catalogue_id),
+        CONSTRAINT genre_id_fk
             FOREIGN KEY(genre_id)
-            REFERENCES genre
+            REFERENCES genre(genre_id),
+        CONSTRAINT platform_id_fk
+            FOREIGN KEY(platform_id)
+            REFERENCES platform(platform_id),
+        CONSTRAINT rate_id_fk
+            FOREIGN KEY(rate_id)
+            REFERENCES daily_rates(rate_id)
 );
-
-    CREATE TABLE pc_cat (
-        cat_no                         NUMBER NOT NULL,
-        platform                       VARCHAR(50),
-        no_of_disks                    NUMBER,
-        release_date                   DATE,
-        screenshots                    VARCHAR2(255),
-        
-        CONSTRAINT pc_cat_no_fk
-            FOREIGN KEY(cat_no)
-            REFERENCES catalogue
-);
-
-    CREATE TABLE wii_cat (
-        cat_no                         NUMBER NOT NULL,
-        platform                       VARCHAR(50),
-        no_of_disks                    NUMBER,
-        release_date                   DATE,
-        screenshots                    VARCHAR2(255),
-        
-        CONSTRAINT wii_cat_no_fk
-            FOREIGN KEY(cat_no)
-            REFERENCES catalogue
-);
-
-    CREATE TABLE ps_cat (
-        cat_no                         NUMBER NOT NULL,
-        platform                       VARCHAR(50),
-        no_of_disks                    NUMBER,
-        release_date                   DATE,
-        screenshots                    VARCHAR2(255),
-        
-        CONSTRAINT ps_cat_no_fk
-            FOREIGN KEY(cat_no)
-            REFERENCES catalogue
-);
-
-    CREATE TABLE xbox_cat (
-        cat_no                         NUMBER NOT NULL,
-        platform                       VARCHAR(50),
-        no_of_disks                    NUMBER,
-        release_date                   DATE,
-        screenshots                    VARCHAR2(255),
-        
-        CONSTRAINT xbox_cat_no_fk
-            FOREIGN KEY(cat_no)
-            REFERENCES catalogue
-);
-
 
     CREATE TABLE stock (
-        stock_no                       NUMBER NOT NULL,
-        cat_no                         NUMBER NOT NULL,
-        date_aquired                   DATE NOT NULL,
-        date_removed                   DATE,
+        stock_id                       NUMBER NOT NULL,
+        catalogue_id                   NUMBER NOT NULL,
+        copies_held                    NUMBER,
+        notes                          VARCHAR2(255),
       
-        CONSTRAINT stock_no_pk 
-            PRIMARY KEY(stock_no),
-        CONSTRAINT cat_no_fk
-            FOREIGN KEY(cat_no) 
-            REFERENCES catalogue(cat_no)
+        CONSTRAINT stock_id_pk 
+            PRIMARY KEY(stock_id),
+        CONSTRAINT catalogue_id_fk
+            FOREIGN KEY(catalogue_id) 
+            REFERENCES catalogue(catalogue_id)
 );
 
   CREATE TABLE supplier (
@@ -93,84 +72,93 @@
 );
 
   CREATE TABLE supplier_item (
+      order_id                       NUMBER NOT NULL,  
       supplier_id                    NUMBER NOT NULL,
-      stock_no                       NUMBER NOT NULL,
-
+      stock_id                       NUMBER NOT NULL,
+      cost                           NUMBER,
+      date_aquired                   DATE,
+      
+      CONSTRAINT order_id_pk
+          PRIMARY KEY(order_id),      
       CONSTRAINT supplier_id_fk
           FOREIGN KEY(supplier_id)
           REFERENCES supplier(supplier_id),
-      CONSTRAINT supi_stock_no_fk
-          FOREIGN KEY(stock_no)
-          REFERENCES stock(stock_no)
+      CONSTRAINT sup_stock_id_fk
+          FOREIGN KEY(stock_id)
+          REFERENCES stock(stock_id)
 );
 
-    CREATE TABLE member (
+    CREATE TABLE members (
         member_id                      NUMBER NOT NULL,
         first_name                     VARCHAR2(255) NOT NULL,
         last_name                      VARCHAR2(255) NOT NULL,
         email                          VARCHAR2(255) NOT NULL UNIQUE,
-        address                        VARCHAR2(255) NOT NULL,
-        postcode                       VARCHAR2(8) NOT NULL,
+        date_of_birth                  DATE NOT NULL,
+        address 1                      VARCHAR2(255) NOT NULL,
+        address 2                      VARCHAR2(255),
         city                           VARCHAR2(50) NOT NULL,
-        active                         NUMBER(1) NOT NULL,
+        postcode                       VARCHAR2(8) NOT NULL,
+        tel_no                         NUMBER(15),
+        max_no_rentals                 NUMBER DEFAULT 4,
         create_date                    DATE NOT NULL,
         last_update                    DATE NOT NULL,
+        active                         NUMBER(1) NOT NULL,
         CONSTRAINT member_id_pk 
             PRIMARY KEY(member_id),
         CONSTRAINT ck_mail 
             CHECK (regexp_like(email, '^(\S+)\@(\S+)\.(\S+)$'))
 );
 
-    CREATE TABLE reservation (
-        res_id                         NUMBER NOT NULL,
-        stock_no                       NUMBER NOT NULL,
-        member_id                      NUMBER NOT NULL,
-        res_date                       DATE NOT NULL,
-
-        CONSTRAINT res_id_pk 
-            PRIMARY KEY(res_id),
-        CONSTRAINT res_stock_no_fk
-            FOREIGN KEY(stock_no)
-            REFERENCES stock(stock_no),
-        CONSTRAINT res_member_id_fk
-            FOREIGN KEY(member_id)
-            REFERENCES member(member_id)    
-);
-
-
-    CREATE TABLE rental (
-        rental_id                      NUMBER NOT NULL,
-        stock_no                       NUMBER NOT NULL,
-        member_id                      NUMBER NOT NULL,
-        rental_date                    DATE NOT NULL,
-        return_date                    DATE NOT NULL,
-
-        CONSTRAINT rental_id_pk 
-            PRIMARY KEY(rental_id),
-        CONSTRAINT ren_stock_no_fk
-            FOREIGN KEY(stock_no)
-            REFERENCES stock(stock_no),
-        CONSTRAINT ren_member_id_fk
-            FOREIGN KEY(member_id)
-            REFERENCES member(member_id)
-);
-
-    CREATE TABLE daily_rates (
-        rate_type                      VARCHAR2(50),
-        rate_price                     NUMBER
-);
-
     CREATE TABLE fine (
-        rental_id                      NUMBER NOT NULL,
+        fine_id                        NUMBER NOT NULL,
         fine_date                      DATE NOT NULL,
         fine_debit                     NUMBER,
         fine_credit                    NUMBER,
 
-        CONSTRAINT fine_rental_id_fk
-            FOREIGN KEY(rental_id)
-            REFERENCES rental(rental_id)
+        CONSTRAINT fine_id_pk
+            PRIMARY KEY(fine_id)
 );
 
+
+    CREATE TABLE rental (
+        member_id                      NUMBER NOT NULL,
+        stock_id                       NUMBER NOT NULL,
+        issue_date                     DATE NOT NULL,
+        return_due                     DATE NOT NULL,
+        return_date                    DATE NOT NULL,
+        no_renewals                    NUMBER DEFAULT 0,
+        rate_id                        NUMBER NOT NULL,
+        fine_id                        NUMBER NULL,
+
+        CONSTRAINT rental_id_pk 
+            PRIMARY KEY(stock_id, issue_date),
+        CONSTRAINT ren_member_id_fk
+            FOREIGN KEY(member_id)
+            REFERENCES member(member_id),
+        CONSTRAINT ren_stock_no_fk
+            FOREIGN KEY(stock_no)
+            REFERENCES stock(stock_no)
+        CONSTRAINT fine_id_fk
+            FOREIGN KEY(fine_id)
+            REFERENCES fine(fine_id)
+
+);
+
+    CREATE TABLE reservation (
+        catalogue_id                   NUMBER NOT NULL,
+        member_id                      NUMBER NOT NULL,
+        date_requested                 DATE NOT NULL,
+        date_issued                    DATE NOT NULL,
+
+        CONSTRAINT res_id_pk 
+            PRIMARY KEY(catalogue_id, member_id, date_requested),
+        CONSTRAINT res_catalogue_id_fk
+            FOREIGN KEY(catalogue_id)
+            REFERENCES catalogue(catalogue_id),
+        CONSTRAINT res_member_id_fk
+            FOREIGN KEY(member_id)
+            REFERENCES member(member_id)    
+);
 ------------------------------INSERT INTO------------------------------
 INSERT ALL
            INTO genre (gen_id, genre)
