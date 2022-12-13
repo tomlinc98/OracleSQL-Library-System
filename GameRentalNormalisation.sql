@@ -33,6 +33,7 @@
         age_rating                     NUMBER DEFAULT 3,
         release_date                   DATE,
         synopsis                       VARCHAR2(255),
+        screenshots                    VARCHAR2(255),
         review                         VARCHAR2(255),
         rating                         NUMBER,
         developer                      VARCHAR2(50),
@@ -160,98 +161,127 @@
 );
 ------------------------------INSERT INTO------------------------------
 INSERT ALL
-           INTO genre (gen_id, genre)
+           INTO genre (genre_id, genre)
            VALUES ('1', 'Action')
            
-           INTO genre (gen_id, genre)
+           INTO genre (genre_id, genre)
            VALUES ('2', 'Adventure')	 
            
-           INTO genre (gen_id, genre)
+           INTO genre (genre_id, genre)
            VALUES ('3', 'Sports')
            
-           INTO genre (gen_id, genre)
+           INTO genre (genre_id, genre)
            VALUES ('4', 'Shooter')
            
 SELECT 1 FROM dual;
 
 INSERT ALL
-           INTO catalogue (cat_no, genre_id, title, synopsis, age_rating, developer)
-           VALUES ('1', '1', 'Death Stranding', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time.', '18', 'Kojima Productions')
+           INTO platform (platform_id, platform)
+           VALUES ('1', 'PC')
            
-           INTO catalogue (cat_no, genre_id, title, synopsis, age_rating, developer)
-           VALUES ('2', '2', 'LEGO Star Wars: The Skywalker Saga', 'Friends and family can dive right into their favorite saga film and play through memorable Star Wars moments, reimagined with LEGO fun and humor.', '7', 'Warner Bros. Interactive Entertainment')	 
+           INTO platform (platform_id, platform)
+           VALUES ('2', 'PlayStation')	 
            
-           INTO catalogue (cat_no, genre_id, title, synopsis, age_rating, developer)
-           VALUES ('3', '3', 'Fifa 22', ' HYPERMOTION GAMEPLAY TECHNOLOGY: Brand new for EA SPORTS FIFA and on next generation consoles, HyperMotion combines two technologies for the first time ever, revolutionising football gameplay.', '3', 'Electronic Arts')
+           INTO platform (platform_id, platform)
+           VALUES ('3', 'Xbox')
            
-           INTO catalogue (cat_no, genre_id, title, synopsis, age_rating, developer)
-           VALUES ('4', '4', 'Call of Duty: Black Ops', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', '18', 'Treyarch')
+           INTO platform (platform_id, platform)
+           VALUES ('4', 'Wii')
+           
+SELECT 1 FROM dual;
+
+INSERT ALL
+           INTO daily_rates (rate_id, rate_type, rate_price)
+           VALUES ('1', 'Latest Games', '1')
+           
+           INTO daily_rates (rate_type, rate_price)
+           VALUES ('2', 'Old Games', '0.3')
 
 SELECT 1 FROM dual;
 
 INSERT ALL
-           INTO pc_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('1', 'PC', '1', '30-MAR-22', 'https://imgur.com/t/deathstranding/pGnbgdU')
-           
-           INTO pc_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('2', 'PC', '1', '05-APR-22', 'https://imgur.com/gallery/4RNZCHN')	 
-           
-           INTO pc_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('3', 'PC', '1', '30-SEP-21', 'https://imgur.com/gallery/9RnVeDH' )
-           
-           INTO pc_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('4', 'PC', '1', '09-NOV-10', 'https://imgur.com/gallery/RX4C3cd' )
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('1', '1', '1', 'Death Stranding', '1', '18', '30-MAR-22', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time.', 'https://imgur.com/t/deathstranding/pGnbgdU', 'https://www.metacritic.com/game/playstation-4/death-stranding' '7.4', 'Kojima Productions', '2')
+ 
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('2', '1', '2', 'Death Stranding', '1', '18', '08-NOV-19', 'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Carrying the disconnected remnants of our future in his hands, Sam Bridges embarks on a journey to reconnect the shattered world one step at a time.', 'https://imgur.com/t/deathstranding/pGnbgdU', 'https://www.metacritic.com/game/playstation-4/death-stranding' '7.4', 'Kojima Productions', '2')
+ 
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('3', '2', '1', 'LEGO Star Wars: The Skywalker Saga', '1', '7', '05-APR-22', 'Friends and family can dive right into their favorite saga film and play through memorable Star Wars moments, reimagined with LEGO fun and humor.', 'https://imgur.com/gallery/4RNZCHN', 'https://www.metacritic.com/game/playstation-5/lego-star-wars-the-skywalker-saga', '8.1', 'Warner Bros. Interactive Entertainment', '2')	 
 
-SELECT 1 FROM dual;
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('4', '2', '2', 'LEGO Star Wars: The Skywalker Saga', '1', '7', '05-APR-22', 'Friends and family can dive right into their favorite saga film and play through memorable Star Wars moments, reimagined with LEGO fun and humor.', 'https://imgur.com/gallery/4RNZCHN', 'https://www.metacritic.com/game/playstation-5/lego-star-wars-the-skywalker-saga', '8.1', 'Warner Bros. Interactive Entertainment', '2')	 
 
-INSERT ALL      
-           INTO wii_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('4', 'Wii', '1', '09-NOV-10', 'https://i0.wp.com/v1cdn.destructoid.com/188051_BlackOpsWii-620x.jpg?resize=620%2C460&ssl=1' )
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('5', '2', '3', 'LEGO Star Wars: The Skywalker Saga', '1', '7', '05-APR-22', 'Friends and family can dive right into their favorite saga film and play through memorable Star Wars moments, reimagined with LEGO fun and humor.', 'https://imgur.com/gallery/4RNZCHN', 'https://www.metacritic.com/game/playstation-5/lego-star-wars-the-skywalker-saga', '8.1', 'Warner Bros. Interactive Entertainment', '2')	 
+          
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('6', '3', '1', 'Fifa 22', '1', '3', '30-SEP-21', 'HYPERMOTION GAMEPLAY TECHNOLOGY: Brand new for EA SPORTS FIFA and on next generation consoles, HyperMotion combines two technologies for the first time ever, revolutionising football gameplay.','https://imgur.com/gallery/9RnVeDH','https://www.metacritic.com/game/pc/fifa-22', '1.8', 'Electronic Arts', '2')
 
-SELECT 1 FROM dual;
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('7', '3', '2', 'Fifa 22', '1', '3', '30-SEP-21', 'HYPERMOTION GAMEPLAY TECHNOLOGY: Brand new for EA SPORTS FIFA and on next generation consoles, HyperMotion combines two technologies for the first time ever, revolutionising football gameplay.','https://imgur.com/gallery/9RnVeDH','https://www.metacritic.com/game/playstation-4/fifa-22', '2.1', 'Electronic Arts', '2')
 
-INSERT ALL
-           INTO ps_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('1', 'PlayStation', '1', '08-NOV-19', 'https://imgur.com/t/deathstranding/pGnbgdU')
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('8', '3', '3', 'Fifa 22', '1', '3', '30-SEP-21', 'HYPERMOTION GAMEPLAY TECHNOLOGY: Brand new for EA SPORTS FIFA and on next generation consoles, HyperMotion combines two technologies for the first time ever, revolutionising football gameplay.','https://imgur.com/gallery/9RnVeDH','https://www.metacritic.com/game/xbox-one/fifa-22', '2.0', 'Electronic Arts', '2')
            
-           INTO ps_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('2', 'PlayStation', '1', '05-APR-22', 'https://imgur.com/gallery/4RNZCHN')	 
-           
-           INTO ps_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('3', 'PlayStation', '1', '30-SEP-21', 'https://imgur.com/gallery/9RnVeDH' )
-           
-           INTO ps_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('4', 'PlayStation', '1', '09-NOV-10', 'https://imgur.com/gallery/RX4C3cd' )
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('9', '4', '1', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/pc/call-of-duty-black-ops' '5.8', 'Treyarch', '2')
 
-SELECT 1 FROM dual;
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('10', '4', '2', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/playstation-3/call-of-duty-black-ops' '6.9', 'Treyarch', '2')
 
-INSERT ALL
-           INTO xbox_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('2', 'Xbox', '1', '05-APR-22', 'https://imgur.com/gallery/4RNZCHN')	 
-           
-           INTO xbox_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('3', 'Xbox', '1', '30-SEP-21', 'https://imgur.com/gallery/9RnVeDH' )
-           
-           INTO xbox_cat (cat_no, platform, no_of_disks, release_date, screenshots)
-           VALUES ('4', 'Xbox', '1', '09-NOV-10', 'https://imgur.com/gallery/RX4C3cd' )
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('11', '4', '3', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://imgur.com/gallery/RX4C3cd', 'https://www.metacritic.com/game/xbox-360/call-of-duty-black-ops' '6.7', 'Treyarch', '2')
 
-SELECT 1 FROM dual;
+           INTO catalogue (catalogue_id, genre_id, platform_id, title, no_disks, age_rating, release_date, synopsis, screenshots, review, rating, developer, rate_id)
+           VALUES ('12', '4', '4', 'Call of Duty: Black Ops', '1', '18', '09-NOV-10', 'Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war.', 'https://i0.wp.com/v1cdn.destructoid.com/188051_BlackOpsWii-620x.jpg?resize=620%2C460&ssl=1', 'https://www.metacritic.com/game/wii/call-of-duty-black-ops' '6.1', 'Treyarch', '2')
+
 
 INSERT ALL
-           INTO stock (stock_no, cat_no, date_aquired, date_removed)
-           VALUES ('1', '1', '05-APR-22', '')
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('1', '1', '1', 'box damage on corner')
            
-           INTO stock (stock_no, cat_no, date_aquired, date_removed)
-           VALUES ('2', '2', '25-OCT-21', '')
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('2', '2', '1', '')
            
-           INTO stock (stock_no, cat_no, date_aquired, date_removed)
-           VALUES ('3', '2', '25-OCT-21', '')
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('3', '3', '1', '')
            
-           INTO stock (stock_no, cat_no, date_aquired, date_removed)
-           VALUES ('4', '4', '09-DEC-10', '')
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('4', '4', '1', 'missing manual')
+           
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('5', '5', '1', '')
+
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('6', '6', '1', '')
+
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('7', '7', '1', '')
+           
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('8', '8', '1', '')
+           
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('9', '9', '1', '')
+           
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('10', '10', '1', '')
+           
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('11', '11', '1', '')
+           
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('12', '12', '1', '')
+           
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('13', '12', '2', '')
+           
+           INTO stock (stock_id, catalogue_id, copies_held, notes)
+           VALUES ('14', '5', '2', '')
 
 SELECT 1 FROM dual;
-
+        
 INSERT ALL
            INTO supplier (supplier_id, supplier_name)
            VALUES ('1', 'games.com')
@@ -265,56 +295,47 @@ INSERT ALL
 SELECT 1 FROM dual;
 
 INSERT ALL
-           INTO supplier_item (supplier_id, stock_no)
-           VALUES ('1', '1')
+           INTO supplier_item (order_id, supplier_id, stock_id, cost, date_aquired)
+           VALUES ('1', '1', '1', '14.99', '25-MAR-22')
            
-           INTO supplier_item (supplier_id, stock_no)
-           VALUES ('2', '2')
+           INTO supplier_item (order_id, supplier_id, stock_id, cost, date_aquired)
+           VALUES ('2', '2', '5', '5.99', '16-SEP-11')
            
-           INTO supplier_item (supplier_id, stock_no)
-           VALUES ('3', '3')
+           INTO supplier_item (order_id, supplier_id, stock_id, cost, date_aquired)
+           VALUES ('3', '2', '14', '5.99', '16-SEP-11')
 
 SELECT 1 FROM dual;
 
 INSERT ALL
-           INTO member (member_id, first_name, last_name, email, address, postcode, city, active, create_date, last_update)
-           VALUES ('1', 'Micheal', 'Bowhill', 'mb0whill@gmail.com', '24 address lane', 'AD1 RE5', 'Luton', '1', '10-DEC-21', '10-DEC-21')
+           INTO members (member_id, first_name, last_name, email, date_of_birth, address_1, address_2, city, postcode, tel_no, max_no_rentals, create_date, last_update, active)
+           VALUES ('1', 'Micheal', 'Bowhill', 'mb0whill@gmail.com', '17-MAY-1979', '24 address lane', '', 'Luton', 'AD1 RE5', '07734 734734', '4', '10-DEC-21', '10-DEC-21', '1')
            
-           INTO member (member_id, first_name, last_name, email, address, postcode, city, active, create_date, last_update)
-           VALUES ('2', 'Megan', 'Fraser', 'meg1fraser@gmail.com', '3 place hill', 'PL4 CEH', 'Bradford', '1', '05-FEB-22', '01-MAR-22')
+           INTO members (member_id, first_name, last_name, email, date_of_birth, address_1, address_2, city, postcode, tel_no, max_no_rentals, create_date, last_update, active)
+           VALUES ('2', 'Megan', 'Fraser', 'meg1fraser@gmail.com', '10-SEP-2001', '3 place hill', '', 'Bradford', 'PL4 CEH', '07234 234234', '4', '05-FEB-22', '01-MAR-22', '1')
            
-           INTO member (member_id, first_name, last_name, email, address, postcode, city, active, create_date, last_update)
-           VALUES ('3', 'Kira', 'Crawford', 'KiraCrawford@gmail.com', '12 somewhere road', 'SM44 WHR', 'Rugby', '1', '22-APR-22', '22-APR-22')
+           INTO members (member_id, first_name, last_name, email, date_of_birth, address_1, address_2, city, postcode, tel_no, max_no_rentals, create_date, last_update, active)
+           VALUES ('3', 'Kira', 'Crawford', 'KiraCrawford@gmail.com', '30-JUN-1984', '12 somewhere road', '', 'Rugby', 'SM44 WHR', '07991 991991', '4', '22-APR-22', '22-APR-22', '1')
 
 SELECT 1 FROM dual;
 
 
 INSERT ALL
-           INTO reservation (res_id, stock_no, member_id, res_date)
-           VALUES ('1', '3', '1', '08-DEC-22')
+           INTO fine (fine_id, fine_date, fine_debit, fine_credit)
+           VALUES ('1', '01-DEC-22', '6', '6')
 
 SELECT 1 FROM dual;
-
+        
 INSERT ALL
-           INTO rental (rental_id, stock_no, member_id, rental_date, return_date)
-           VALUES ('1', '1', '2', '05-DEC-22', '19-DEC-22')
+           INTO rental (member_id, stock_id, issue_date, return_due, return_date, no_renewals, rate_id, fine_id)
+           VALUES ('2', '1', '05-DEC-22', '19-DEC-22', '19-DEC-22', '0', '2', '')
            
-           INTO rental (rental_id, stock_no, member_id, rental_date, return_date)
-           VALUES ('2', '3', '3', '16-NOV-22', '30-DEC-22')
+           INTO rental (member_id, stock_id, issue_date, return_due, return_date, no_renewals, rate_id, fine_id)
+           VALUES ('3', '3', '16-NOV-22', '28-DEC-22', '28-DEC-22', '4', '2', '')
 
 SELECT 1 FROM dual;
 
 INSERT ALL
-           INTO daily_rates (rate_type, rate_price)
-           VALUES ('Latest Games', '1' )
-           
-           INTO daily_rates (rate_type, rate_price)
-           VALUES ('Old Games', '0.3' )
-
-SELECT 1 FROM dual;
-
-INSERT ALL
-           INTO fine (rental_id, fine_date, fine_debit, fine_credit)
-           VALUES ('2', '01-DEC-22', '6', '0')
+           INTO reservation (catalogue_id, member_id, date_requested, date_issued)
+           VALUES ('3', '1', '08-DEC-22', '')
 
 SELECT 1 FROM dual;
