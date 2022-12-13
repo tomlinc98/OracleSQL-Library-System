@@ -94,8 +94,8 @@
         last_name                      VARCHAR2(255) NOT NULL,
         email                          VARCHAR2(255) NOT NULL UNIQUE,
         date_of_birth                  DATE NOT NULL,
-        address 1                      VARCHAR2(255) NOT NULL,
-        address 2                      VARCHAR2(255),
+        address_1                      VARCHAR2(255) NOT NULL,
+        address_2                      VARCHAR2(255),
         city                           VARCHAR2(50) NOT NULL,
         postcode                       VARCHAR2(8) NOT NULL,
         tel_no                         NUMBER(15),
@@ -134,14 +134,13 @@
             PRIMARY KEY(stock_id, issue_date),
         CONSTRAINT ren_member_id_fk
             FOREIGN KEY(member_id)
-            REFERENCES member(member_id),
-        CONSTRAINT ren_stock_no_fk
-            FOREIGN KEY(stock_no)
-            REFERENCES stock(stock_no)
+            REFERENCES members(member_id),
+        CONSTRAINT ren_stock_id_fk
+            FOREIGN KEY(stock_id)
+            REFERENCES stock(stock_id),
         CONSTRAINT fine_id_fk
             FOREIGN KEY(fine_id)
             REFERENCES fine(fine_id)
-
 );
 
     CREATE TABLE reservation (
@@ -150,14 +149,14 @@
         date_requested                 DATE NOT NULL,
         date_issued                    DATE NOT NULL,
 
-        CONSTRAINT res_id_pk 
-            PRIMARY KEY(catalogue_id, member_id, date_requested),
         CONSTRAINT res_catalogue_id_fk
             FOREIGN KEY(catalogue_id)
             REFERENCES catalogue(catalogue_id),
         CONSTRAINT res_member_id_fk
             FOREIGN KEY(member_id)
-            REFERENCES member(member_id)    
+            REFERENCES members(member_id),
+        CONSTRAINT res_id_pk 
+            PRIMARY KEY(catalogue_id, member_id, date_requested)
 );
 ------------------------------INSERT INTO------------------------------
 INSERT ALL
